@@ -1,0 +1,67 @@
+这是一个大的项目
+底下分若干有关系的子项目 如 admin   www   api  biz
+每个子项目启用不同的子域名 admin.a.com  www.a.com api.a.com
+每个子域名session不共用
+/static 通用静态资源文件 绑定域名 static.a.com
+    css/
+        main.css
+    js/
+        main.js
+    images/
+    font/
+    其他/
+    download/
+/public  对外目录  所有对外文件都在这里 不对外的禁止存放这里！
+    index.php 入口文件
+    asset/ 专用静态资源文件
+        css/
+            main.css
+        js/
+            main.js
+        images/
+        font/
+        其他/
+        download/
+
+/www_public
+    index.php
+    asset/ 专用静态资源文件
+        css/
+            main.css
+        js/
+            main.js
+        images/
+        font/
+        其他/
+    download/
+
+
+错误信息处理
+    1、ajax请求   1、请求返回html页面 url参数带 dataType=html  2、json数据
+    2、普通web请求
+    {
+        'status':'sucess|error',
+        'msg':'XXXXX',
+        'data':'前端需要的数据',
+        'errinput':'字段错误提示信息'
+        'nextUrl':'下一步需要执行跳转的url'
+    }
+
+    1.1 2处理方式  输出错误信息模板   公共方法   msg('err')
+    1.2 输出json 数据          sendJson(status)
+    不管哪里输出信息 都是应该结束当前业务 而不是整个框架流程  怎么办？ 通过return 调用方式 可以终结当前业务
+                                                            抛出异常 不好？？？
+                                                            return $this->msg()  return $this->sendJson()
+
+
+    重写 application::handle   增加BaseController对于正常模板解析     统一  return $this->render();
+
+
+
+
+
+
+一般数据储存在mysql 数据库共用
+session采用redis   键值：session:项目名:sessionId  如 session:admin:sessionId
+不必要的缓存采用redis  键值： cache:项目名:缓存id  如： cache:admin:缓存id
+不必要的数据 储存在mongo或者文本文件    需要统计分析的mongo  偶尔需要查看的文本文件

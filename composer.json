@@ -1,0 +1,11 @@
+{
+    "name": "phalcon",
+    "authors": [
+        {
+            "name": "phalcon",
+            "email": "phalcon@qq.com"
+        }
+    ],
+    "require-dev": {
+    }
+}
