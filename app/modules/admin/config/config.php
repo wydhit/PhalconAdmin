@@ -2,5 +2,8 @@
 
 
 return new Phalcon\Config([
-    'adminParam'=>['a']
+    'adminParam'=>['a'],
+    'application'=>[
+        'baseUri' => '/'
+    ]
 ]);

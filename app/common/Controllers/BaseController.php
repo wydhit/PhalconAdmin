@@ -14,6 +14,64 @@ use Phalcon\Mvc\View;
 
 class BaseController extends Controller
 {
+    protected function addTitle($title, $clear = false)
+    {
+        if ($clear) {
+            $this->view->title = $title;
+        } else {
+            $this->view->title .= $title;
+        }
+    }
+    protected function addProjectTitle($title=''){
+        $this->view->projectTitle=$title;
+    }
+
+    /**
+     * @var $pluginCollection \Phalcon\Assets\Collection
+     */
+    protected $pluginCollection = null;
+    /**
+     * @var $inlineCollection \Phalcon\Assets\Collection
+     */
+    protected $inlineCollection = null;
+
+    protected function assetsManager()
+    {
+        $this->pluginCollection = $this->assets->collection('plugin');
+        $this->inlineCollection = $this->assets->collection('inline');
+    }
+
+    /*增加插件的css*/
+    protected function addPluginCss($css = '')
+    {
+        if ($this->pluginCollection !== null) {
+            $this->pluginCollection->addCss($css);
+        }
+    }
+
+    /*增加页面独有的css*/
+    protected function addInlineCss($css = '')
+    {
+        if ($this->inlineCollection !== null) {
+            $this->inlineCollection->addCss($css);
+        }
+    }
+
+    /*增加插件的js*/
+    protected function addPluginJs($js = '')
+    {
+        if ($this->pluginCollection !== null) {
+            $this->pluginCollection->addCss($js);
+        }
+    }
+
+    /*增加页面独有的Js*/
+    protected function addInlineJs($js = '')
+    {
+        if ($this->inlineCollection !== null) {
+            $this->inlineCollection->addCss($js);
+        }
+    }
 
 
     /*返回json相关*/
@@ -26,6 +84,7 @@ class BaseController extends Controller
     {
         return $this->sendJson('success', $msg, $data, $errInput);
     }
+
     /**
      * 返回json数据
      * @param string $status 状态 约定只能是error 或者sucess
@@ -34,7 +93,7 @@ class BaseController extends Controller
      * @param array $errInput //字段错误信息
      * @return string
      */
-    public function sendJson($status = 'error', $msg = '', $data = [], $errInput = [])
+    public function sendJson($status = 'error', $msg = '', $data = [], $errInput = [], $goUrl = '')
     {
         if (!in_array($status, ['error', 'success'])) {
             $status = 'error';
@@ -42,7 +101,7 @@ class BaseController extends Controller
         if (is_array($msg)) {
             $msg = join("\r\n", $msg);
         }
-        return $this->response->setJsonContent(compact('status', 'msg', 'data', 'errInput'));
+        return $this->response->setJsonContent(compact('status', 'msg', 'data', 'errInput', 'goUrl'));
     }
 
     /*视图模板相关begin*/
@@ -94,7 +153,9 @@ class BaseController extends Controller
         $this->addDataS($data);
         $controllerName = empty($controllerName) ? $this->dispatcher->getControllerName() : $controllerName;
         $actionName = empty($actionName) ? $this->dispatcher->getActionName() : $actionName;
-        return $this->view->start()->render($controllerName, $actionName, $data)->finish()->getContent();
+        $this->view->start()->render($controllerName, $actionName, $data);
+        $this->view->finish();
+        return $this->view->getContent();
     }
 
     /*视图模板相关end*/
@@ -102,6 +163,7 @@ class BaseController extends Controller
     {
         return $this->render(compact('message', 'url', 'time'), 'msg', 'msg');
     }
+
     /**
      * 给前段datagrid发送标准化数据
      * @param  $data array 返回的数据 必填
@@ -111,32 +173,32 @@ class BaseController extends Controller
      * @param $otherData array 其他附加数据
      */
 
-    public function sendJsonForDateGrid($data=[],$records=0, $page=null,$total=null,$otherData=[] )
+    public function sendJsonForDateGrid($data = [], $records = 0, $page = null, $total = null, $otherData = [])
     {
         /*当前页记录数据*/
-        if ( !is_array( $data ) ) {
+        if (!is_array($data)) {
             $data = (array)$data;
         }
-        $array['rows']=$data;
+        $array['rows'] = $data;
 
         /*总共多少条数据*/
-        $array['records']=$records;
+        $array['records'] = $records;
         /*请求第几页数据*/
-        if ( $page===null ) {
-            $array['page'] =(int)$this->request->get( 'page', 'int', 1 );//
-        }else{
-            $array['page']=$page;
+        if ($page === null) {
+            $array['page'] = (int)$this->request->get('page', 'int', 1);//
+        } else {
+            $array['page'] = $page;
         }
 
         /*总共多少页数据*/
-        if ( $total===null ) {
+        if ($total === null) {
             $rows = $this->request->get('rows', 'int', 10);
-            $array['total'] = ceil( $array['records'] / $rows );;
-        }else{
-            $array['total']=$total;
+            $array['total'] = ceil($array['records'] / $rows);;
+        } else {
+            $array['total'] = $total;
         }
-        $array['status']='success';
-        $array['otherData']=$otherData;
+        $array['status'] = 'success';
+        $array['otherData'] = $otherData;
         $this->response->setJsonContent($array);
     }
 

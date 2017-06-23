@@ -1,26 +1,33 @@
 <?php
+
 namespace Admin\Controllers;
 
 
 use Common\Controllers\BaseController;
+use Common\Models\WeOrder;
 
-class IndexController  extends AdminController
+class IndexController extends AdminController
 {
+    public function listAction()
+    {
+
+        echo '<!doctype html>
+                <html lang="en">
+                    <head>
+                    <meta charset="UTF-8">
+                         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+                         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                         <title>Document</title>
+                    </head>
+                    <body>                  
+                    </body>
+                </html>';
+    }
+
     public function indexAction()
     {
-        var_dump($this->config);
-
-        //echo  '随意输出';
-//        return 'sdfd';//setContent
-//        return ['s','asdf'];
-//        $a=new \stdClass();
-//        $a->a='a';
-//        return $a;//1.response对象 直接使用返回 其他对象不处理
-//        return true;//使用模板解析结果
-//        return false;//不处理原始response
-
-
-        return $this->actionRender();
+        $this->addData('order', WeOrder::findFirst());
+        return $this->render();
 
     }
 

@@ -3,4 +3,7 @@ logs/*
 .phalcon
 .idea
 app/config/local.config.php
+vendor/*
+
+
 
