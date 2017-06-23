@@ -29,5 +29,3 @@ foreach ($application->getModules() as $key => $module) {
         'params' => 3
     ));
 }
-
-/*添加自定义的路由*/

@@ -14,6 +14,21 @@ use Phalcon\Mvc\View;
 
 class BaseController extends Controller
 {
+
+
+    var $breadCrumb = [];
+    /**
+     * 增加面包屑导航
+     * @param string $text 显示文字
+     * @param string $url 调转地址
+     */
+    protected function addBreadcrumb($text = '', $url = '')
+    {
+
+        $this->breadCrumb[] = ['text' => $text, 'url' => $url];
+        $this->view->breadCrumb=$this->breadCrumb;
+    }
+
     protected function addTitle($title, $clear = false)
     {
         if ($clear) {
@@ -22,57 +37,11 @@ class BaseController extends Controller
             $this->view->title .= $title;
         }
     }
-    protected function addProjectTitle($title=''){
-        $this->view->projectTitle=$title;
-    }
 
-    /**
-     * @var $pluginCollection \Phalcon\Assets\Collection
-     */
-    protected $pluginCollection = null;
-    /**
-     * @var $inlineCollection \Phalcon\Assets\Collection
-     */
-    protected $inlineCollection = null;
-
-    protected function assetsManager()
+    protected function addProjectTitle($title = '')
     {
-        $this->pluginCollection = $this->assets->collection('plugin');
-        $this->inlineCollection = $this->assets->collection('inline');
+        $this->view->projectTitle = $title;
     }
-
-    /*增加插件的css*/
-    protected function addPluginCss($css = '')
-    {
-        if ($this->pluginCollection !== null) {
-            $this->pluginCollection->addCss($css);
-        }
-    }
-
-    /*增加页面独有的css*/
-    protected function addInlineCss($css = '')
-    {
-        if ($this->inlineCollection !== null) {
-            $this->inlineCollection->addCss($css);
-        }
-    }
-
-    /*增加插件的js*/
-    protected function addPluginJs($js = '')
-    {
-        if ($this->pluginCollection !== null) {
-            $this->pluginCollection->addCss($js);
-        }
-    }
-
-    /*增加页面独有的Js*/
-    protected function addInlineJs($js = '')
-    {
-        if ($this->inlineCollection !== null) {
-            $this->inlineCollection->addCss($js);
-        }
-    }
-
 
     /*返回json相关*/
     public function sendErrorJson($msg = '', $data = [], $errInput = [])
@@ -199,7 +168,7 @@ class BaseController extends Controller
         }
         $array['status'] = 'success';
         $array['otherData'] = $otherData;
-        $this->response->setJsonContent($array);
+        return $this->response->setJsonContent($array);
     }
 
 }

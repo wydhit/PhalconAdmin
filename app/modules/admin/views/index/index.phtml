@@ -1,1 +1,69 @@
-asas
+<!-- /.page-content -->
+<div class="page-content" style="padding-top: 3px">
+    <div class="page-header" style="padding: 0;margin:0;">
+        <div id="search_box">
+            <div class="widget-box">
+                <div class="widget-body">
+                    <div class="widget-main" style="padding: 6px">
+                        <form id="searchForGrid" class="form-search form-inline"  data-grid="grid-table">
+                            <select class="form-control input-small" id="isgroup" name="isgroup">
+                                <option value="all">全部</option>
+                                <option value="1">组合</option>
+                                <option value="0">非组合</option>
+                            </select>
+                            <input type="text" name="title" id="title" class="form-control input-large  search-query" placeholder="商品名称"/>
+                            <button type="submit" id="mysearch_button" class="btn btn-purple btn-sm ">
+                                搜索<i class="icon-search icon-on-right bigger-110"></i>
+                            </button>
+                            <?php echo \Common\Forms\CommonForm::datePicker('add'); ?>
+                            <a href="#">
+                                <button type="button" title="添加商品" class="btn btn-purple btn-sm pull-right ">
+                                    添加商品<i class="icon-plus-sign icon-on-right bigger-110"></i>
+                                </button>
+                            </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /.page-header -->
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- PAGE CONTENT BEGINS -->
+            <div id="gridDiv">
+                <table id="grid-table" data-url="/admin/goods/list"></table>
+                <div id="grid-pager"></div>
+            </div>
+            <!-- PAGE CONTENT ENDS -->
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+</div><!-- /.page-content -->
+<script>
+    $('#grid-table').trigger("reloadGrid"); //重新载入
+    jQuery(function ($) {
+        var grid_table=dataGridHelper.show(
+            'grid-table',
+            'grid-pager',
+            ['预览图', '商品ID', '标题', '操作'],
+            [
+                {name: 'preimg', index: 'preimg', sortable: false},
+                {name: 'id', index: 'id', width: 60, sortable: true},
+                {name: 'title', index: 'title', sortable: false},
+                {
+                    name: 'id', index: 'id', width: 60, sortable: false,
+                    formatter: function (cellvalue, options, rowObject) {
+                        var thisEditUrl = '/admin/goods/edit/' + cellvalue;
+                        return '<input ' +
+                            'type="button" ' +
+                            'value="编辑商品" ' +
+                            'onclick="helper.dialogOpen(this)" ' +
+                            'data-href="' + thisEditUrl + '" ' +
+                            'title="编辑商品" ' +
+                            'class="btn btn-primary btn-sm" />';
+                    }
+                }
+            ],
+            '', '', {'rowNum': 2}
+        );
+    });
+</script>

@@ -35,14 +35,13 @@ class AdminController extends BaseController
         $this->view->action = $this->action = $this->dispatcher->getActionName();
         $this->view->controller = $this->controller = $this->dispatcher->getControllerName();
         $this->view->baseUri = $this->baseUri = $this->config->application->baseUri;
-        $this->assetsManager();//启动资源管理
+        $this->checkLogin();
+
         $this->addTitle('管理后台');
         $this->addProjectTitle('XXX管理中心');
-        $this->checkLogin();
+
+
     }
-
-
-
     /**
      * 检查登录
      */
