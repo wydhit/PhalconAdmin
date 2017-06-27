@@ -174,4 +174,10 @@ class BaseController extends Controller
         return $this->response->setJsonContent($array);
     }
 
+    public function noFoundaAction()
+    {
+        exit('nofound');
+        
+    }
+
 }

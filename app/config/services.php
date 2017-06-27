@@ -21,12 +21,8 @@ $di->setShared('db', function () use ($config) {
 });
 
 /*路由服务*/
-$di->setShared('router', function () {
+$di->setShared('router', function () use ($di){
     $router = new \Phalcon\Mvc\Router();
-    $router->setDefaultModule('admin');
-    $router->setDefaultNamespace('Admin\Controllers');
-    $router->setDefaultController('index');
-    $router->setDefaultAction('list');
     return $router;
 });
 /*自动加载器*/
@@ -81,4 +77,25 @@ $di->setShared(
         return $crypt;
     }
 );
+/*日志*/
+$di->setShared('logger',function (){
+    $logger= new \Phalcon\Logger\Multiple();
+    $loggerPath=BASE_PATH.'logs'.D_S.date("Y").D_S;
+    if(!is_dir($loggerPath)){
+        mkdir($loggerPath,0777);
+    }
+    $textLogger =new \Phalcon\Logger\Adapter\File($loggerPath.date('Y-m-d').'.log');
+    $logger->push($textLogger);
+    if(APP_DEBUG){
+        $logger->push(new \Phalcon\Logger\Adapter\Firephp(''));
+    }
+    return $logger;
+});
+/*缓存*/
+$di->setShared('cache',function (){
+    $frontCache= new \Phalcon\Cache\Frontend\Data(['lifetime'=>'172800']);
+    $cacheDir=BASE_PATH.'cache'.D_S;
+    $cache= new \Phalcon\Cache\Backend\File($frontCache,['cacheDir'=>$cacheDir]);
+    return $cache;
+});
 

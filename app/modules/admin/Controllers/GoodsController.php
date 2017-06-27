@@ -8,21 +8,18 @@
 
 namespace Admin\Controllers;
 
-
-use Common\Controllers\BaseController;
-use Common\Forms\ComGoodsSearch;
-use Common\Models\WeComgoods;
 use Common\Repository\UserRepository;
+use Common\Search\ComGoodsSearch;
 
 class GoodsController extends AdminController
 {
 
     public function listAction()
     {
-
         $comGoodsSearch=ComGoodsSearch::N();
         $goods= $comGoodsSearch->comGoodsListForGrid($this->request);
         if($goods){
+            $this->logger->alert(json_encode($this->request->get(null)));
             return $this->sendJsonForDateGrid($goods['data'],$goods['count'],null,null,$goods['searchData']);
         }else{
             return $this->sendErrorJson($comGoodsSearch->getMsgStr());

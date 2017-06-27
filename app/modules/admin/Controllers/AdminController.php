@@ -7,7 +7,7 @@ use Common\Models\WeUser;
 use Common\Repository\CommonRepository;
 use Common\Repository\UserRepository;
 
-class AdminController extends BaseController
+ class AdminController extends BaseController
 {
     /*admin项目相关业务*/
     public $adminInfo = [];
@@ -36,7 +36,6 @@ class AdminController extends BaseController
         $this->view->controller = $this->controller = $this->dispatcher->getControllerName();
         $this->view->baseUri = $this->baseUri = $this->config->application->baseUri;
         $this->checkLogin();
-
         $this->addTitle('管理后台');
         $this->addProjectTitle('XXX管理中心');
 

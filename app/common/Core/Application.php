@@ -14,7 +14,7 @@ class Application extends baseApplication
     }
 
     /*ssss*/
-    public function handleXXX($uri = null)
+    public function handleX($uri = null)
     {
         $di = $this->getDI();
 
@@ -26,7 +26,7 @@ class Application extends baseApplication
         $router = $di->getShared('router');
         $router->handle($uri);
         $matchedRoute = $router->getMatchedRoute();
-//        var_dump($matchedRoute);
+
 
         if (gettype($matchedRoute) === 'object') {
             $match = $matchedRoute->getMatch();
@@ -48,6 +48,7 @@ class Application extends baseApplication
         $moduleName = $router->getModuleName();
         $moduleName = empty($moduleName) ? $this->_defaultModule : $moduleName;
         $module = $this->getModule($moduleName);
+
 
         $moduleObject = null;
         if (is_array($module)) {
@@ -80,7 +81,6 @@ class Application extends baseApplication
         $dispatcher->setParams($router->getParams());
         $controller = $dispatcher->dispatch();
         $possibleResponse = $dispatcher->getReturnedValue();
-        var_dump($possibleResponse);
 //        $response=$di->get('response');
 //        if (is_string($possibleResponse)){
 //            $response->setContent($possibleResponse);

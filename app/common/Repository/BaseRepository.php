@@ -12,43 +12,12 @@
 
 namespace Common\Repository;
 
+use Common\Core\BaseInjectable;
 use Common\Traits\ErrMsg;
-use Phalcon\Di;
-use Phalcon\Di\Injectable;
 
-class BaseRepository extends Injectable
+class BaseRepository extends BaseInjectable
 {
     use ErrMsg;
     protected $SESSION_BASE = 'admin_';
-    /**
-     * @var $di Di\FactoryDefault null
-     */
-    public $di = null;
-
-    public function initialize()
-    {
-    }
-
-    public function setDI(\Phalcon\DiInterface $dependencyInjector)
-    {
-        parent::setDI($dependencyInjector);
-        $this->initialize();
-    }
-
-    /**
-     *
-     * @param $forceNew bool 是否强制返回一个新的实例
-     * @return static
-     */
-    public static function N($forceNew = false)
-    {
-        if ($forceNew) {
-            $class = new  static();
-            $class->setDI(Di::getDefault());
-            return $class;
-        } else {
-            return Di::getDefault()->getShared(get_called_class());
-        }
-    }
 
 }

@@ -23,7 +23,6 @@ $config = new \Phalcon\Config([
         'cacheDir'       => BASE_PATH . 'cache'.D_S,
         'baseUri' => '/'
     ]
-
 ]);
 
 if (file_exists(__DIR__ . '/local.config.php')) {

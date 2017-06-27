@@ -4,6 +4,7 @@ namespace Admin;
 
 use Phalcon\DiInterface;
 use Phalcon\Mvc\ModuleDefinitionInterface;
+use Phalcon\Mvc\Url;
 use Phalcon\Mvc\View;
 
 
@@ -37,8 +38,14 @@ class Module implements ModuleDefinitionInterface
             );
             return $view;
         });
-
         $di->get('config')->merge(include(__DIR__ . '/config/config.php'));
+        /*url服务*/
+        $di->remove('url');
+        $di->setShared('url', function () use ($di) {
+            $url = new Url();
+            $url->setBaseUri($di->get('config')->get('application')->baseUri);
+            return $url;
+        });
     }
 
 }

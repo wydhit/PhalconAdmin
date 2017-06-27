@@ -6,15 +6,14 @@
  * Time: 10:57
  */
 
-namespace Common\Forms;
+namespace Common\Search;
 
 
-use Common\Models\WeComgoods;
 use Common\Traits\SearchForGrid;
 use Phalcon\Http\Request;
 use Phalcon\Paginator\Adapter\QueryBuilder;
 
-class ComGoodsSearch extends BaseForm
+class ComGoodsSearch extends BaseSearch
 {
     use SearchForGrid;
     public $title;
@@ -22,6 +21,11 @@ class ComGoodsSearch extends BaseForm
 
     public function comGoodsListForGrid(Request $request)
     {
+//        $cacheKey=md5(serialize($this->searchData).$this->sord.$this->page.$this->sidx.$this->rows);
+//        if($cacheContent=$this->cache->get($cacheKey,10)){
+//            return $cacheContent;
+//        }
+
         $this->SearchParamInit($request);
         /*搜索处理区*/
         $builder = $this->modelsManager->createBuilder()
@@ -53,6 +57,7 @@ class ComGoodsSearch extends BaseForm
         ]))->getPaginate();
         $this->gridReturnData = $paginator->items->toArray();
         $this->gridReturnCount = $paginator->total_items;
+//        $this->cache->save($cacheKey,$this->returnGridData(),10);
         return $this->returnGridData();
     }
 
