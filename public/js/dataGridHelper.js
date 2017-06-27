@@ -120,6 +120,8 @@ var dataGridHelper = {
         var grid=$(grid_selector).jqGrid(gridConfig);
         dataGridHelper.afterGrid(grid_selector,pager_selector);
         this.gridSelectorAll[grid_selectors]=grid;
+
         return grid;
     }
 };
+

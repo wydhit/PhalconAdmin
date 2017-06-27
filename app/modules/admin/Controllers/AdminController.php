@@ -4,8 +4,8 @@ namespace Admin\Controllers;
 
 use Common\Controllers\BaseController;
 use Common\Models\WeUser;
-use Common\Services\CommonService;
-use Common\Services\UserService;
+use Common\Repository\CommonRepository;
+use Common\Repository\UserRepository;
 
 class AdminController extends BaseController
 {
@@ -13,11 +13,11 @@ class AdminController extends BaseController
     public $adminInfo = [];
     public $adminId = 0;
     /**
-     * @var $sessionService  UserService;
+     * @var $sessionService  UserRepository;
      */
     public $userService;
     /**
-     * @var $commonService  CommonService;
+     * @var $commonService  CommonRepository;
      */
     public $commonService;
 
@@ -30,8 +30,8 @@ class AdminController extends BaseController
 
     public function initialize()
     {
-        $this->userService = $this->di->getShared(UserService::class);
-        $this->commonService = $this->di->getShared(CommonService::class);
+        $this->userService = $this->di->getShared(UserRepository::class);
+        $this->commonService = $this->di->getShared(CommonRepository::class);
         $this->view->action = $this->action = $this->dispatcher->getActionName();
         $this->view->controller = $this->controller = $this->dispatcher->getControllerName();
         $this->view->baseUri = $this->baseUri = $this->config->application->baseUri;

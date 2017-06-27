@@ -65,3 +65,36 @@
 session采用redis   键值：session:项目名:sessionId  如 session:admin:sessionId
 不必要的缓存采用redis  键值： cache:项目名:缓存id  如： cache:admin:缓存id
 不必要的数据 储存在mongo或者文本文件    需要统计分析的mongo  偶尔需要查看的文本文件
+
+
+
+
+
+#### 数据使用规范
+表明 字段名 全部小写用下划线分割
+主键同意id  外键 表明_id
+常用规范
+  1、时间:int
+  time：unix时间戳   start_time：开始时间  end_time 结束时间  create_time 数据创建时间  update_time  数据更新时间
+  delete_time 删除时间....
+  2、状态之类的枚举 tinyint(1)
+   status:状态
+   type:类型
+   用数字表示约定的几种状态 1:新建 2:更新  3:完成 （尽量不要使用0，必须写注释）
+   这类型的字段同时用常量些写进model中  const STATUS=[1=>'新建',2=>'更新',3=>'完成']
+  3.title：标题 名称   name：姓名    content:内容
+    img：图片   pre_img 预览图   big_img 大图  small_img 小图
+    keywords：关键词   description：描述
+    other:备注   cls:排序   pid:上级id  ip：ip地址
+  4.isdel 是否删除 默认0代表正常数据  1代表已被删除
+  5.is_***   是否可用等等
+逻辑规范:
+   1、控制器中尽量避免直接操作模型 尽量通过服务仓库 操作
+   2、仅仅是查找数据列表展示 不用orm  直接在仓库$this->modelsManager->createBuilder()创建查询并返回array
+   3、涉及到插入 更新 删除数据的操作 一定使用orm 需要连表数据或者连表操作时 使用模型关联 一定不用join
+
+
+
+
+
+

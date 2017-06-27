@@ -12,12 +12,13 @@ var helper = {
                     pd[key] = value;
                 });
                 var grid_selector = $(this).data('grid');
-                dataGridHelper.gridSelectorAll[grid_selector].setGridParam({'page': 1, postData: pd})
+                dataGridHelper.gridSelectorAll[grid_selector].setGridParam({'page': 1, postData:{'searchData':pd} })
                     .trigger("reloadGrid"); //重新载入
                 return false;
             });
         }
         /*使用jqgrid的页面头部搜索用*/
+
     },
     /*格式化unix时间戳*/
     'unixTimeToStr': function (times) {
@@ -117,3 +118,4 @@ var helper = {
     }
 };
 helper.init();
+

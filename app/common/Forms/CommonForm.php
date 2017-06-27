@@ -30,13 +30,22 @@ class CommonForm
                     $('#$name').datepicker({
                         language: 'zh-CN',
                         autoclose: true,
-                        todayHighlight: true
+                        todayHighlight: true,
+                        showButtonPanel: true,
+                        changeMonth: true,
+                        changeYear: true,
+                        dateFormat:'yy-mm-dd',
+                        beforeShow:function(input){
+                            $(input).css({zIndex:'1000'});
+                        }
                     });    
                    });
                </script>
                ";
 
     }
+
+
 
 
 }

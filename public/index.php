@@ -12,16 +12,13 @@ try {
     $loader = $di->get('loader')->register();
     /*初始化应用主题*/
     $application = new Application($di);
-
-    APP_DEBUG && $di['app'] = $application; ;
-
-
+    APP_DEBUG && $di['app'] = $application;;
     /*禁用默认视图解析注册模块*/
     $allModule = require APP_PATH . 'config/modules.php';
     $application->useImplicitView(false)->registerModules($allModule);
     /*加载路由*/
     require APP_PATH . 'config/routes.php';
-    APP_DEBUG && (new Snowair\Debugbar\ServiceProvider(APP_PATH.'config/debugger_config.php'))->start();
+    APP_DEBUG && (new Snowair\Debugbar\ServiceProvider(APP_PATH . 'config/debugger_config.php'))->start();
     /*处理请求*/
     $response = $application->handle();
     /*发送结果*/
@@ -41,7 +38,3 @@ try {
         echo $message;
     }
 }
-
-//echo microtime(true)-$time;
-//echo '<br/>';
-//echo memory_get_usage()-$m;

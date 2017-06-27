@@ -8,6 +8,7 @@
 
 namespace Common\Controllers;
 
+use Phalcon\Http\Response;
 use \Phalcon\Mvc\Controller;
 use Phalcon\Mvc\View;
 
@@ -17,6 +18,7 @@ class BaseController extends Controller
 
 
     var $breadCrumb = [];
+
     /**
      * 增加面包屑导航
      * @param string $text 显示文字
@@ -26,7 +28,7 @@ class BaseController extends Controller
     {
 
         $this->breadCrumb[] = ['text' => $text, 'url' => $url];
-        $this->view->breadCrumb=$this->breadCrumb;
+        $this->view->breadCrumb = $this->breadCrumb;
     }
 
     protected function addTitle($title, $clear = false)
@@ -139,10 +141,11 @@ class BaseController extends Controller
      * @param $records int 全部记录总数 必填
      * @param $page int 当前页 不填自动获取
      * @param $total int 总页数  不填自动计算
-     * @param $otherData array 其他附加数据
+     * @param $searchData array 其他附加数据
+     * @return  Response;
      */
 
-    public function sendJsonForDateGrid($data = [], $records = 0, $page = null, $total = null, $otherData = [])
+    public function sendJsonForDateGrid($data = [], $records = 0, $page = null, $total = null, $searchData = [])
     {
         /*当前页记录数据*/
         if (!is_array($data)) {
@@ -151,7 +154,7 @@ class BaseController extends Controller
         $array['rows'] = $data;
 
         /*总共多少条数据*/
-        $array['records'] = $records;
+        $array['records'] = (int)$records;
         /*请求第几页数据*/
         if ($page === null) {
             $array['page'] = (int)$this->request->get('page', 'int', 1);//
@@ -162,12 +165,12 @@ class BaseController extends Controller
         /*总共多少页数据*/
         if ($total === null) {
             $rows = $this->request->get('rows', 'int', 10);
-            $array['total'] = ceil($array['records'] / $rows);;
+            $array['total'] = ceil($array['records'] / $rows);
         } else {
             $array['total'] = $total;
         }
         $array['status'] = 'success';
-        $array['otherData'] = $otherData;
+        $array['searchData'] = $searchData;
         return $this->response->setJsonContent($array);
     }
 

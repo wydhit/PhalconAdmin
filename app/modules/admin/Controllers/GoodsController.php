@@ -10,35 +10,29 @@ namespace Admin\Controllers;
 
 
 use Common\Controllers\BaseController;
+use Common\Forms\ComGoodsSearch;
 use Common\Models\WeComgoods;
+use Common\Repository\UserRepository;
 
 class GoodsController extends AdminController
 {
 
     public function listAction()
     {
-        $page = $this->request->get('page', 'int', 1);
-        $rows = $this->request->get('rows', 'int', 10);
-        $sidx = $this->request->get('sidx', 'string', 'id');
-        $sord = $this->request->get('sord', 'string', 'asc');
-//        return $this->sendJson('error', '执行错误', ['a' => 'a', 'asdf', 'a市地方', 1, 3242]);
-        $goods=WeComgoods::query()
-            ->columns([
-                'id'=>'Common\Models\WeComgoods.id',
-                'title'=>'Common\Models\WeGoods.title',
-                'preimg'=>'Common\Models\WeGoods.preimg'
-            ])
-            ->leftJoin('Common\Models\WeGoods','Common\Models\WeGoods.id=Common\Models\WeComgoods.goodsid')
-            ->limit(10)
-            ->execute()
-            ->toArray();
-        $total=WeComgoods::count();
-        return $this->sendJsonForDateGrid($goods,$total);
 
+        $comGoodsSearch=ComGoodsSearch::N();
+        $goods= $comGoodsSearch->comGoodsListForGrid($this->request);
+        if($goods){
+            return $this->sendJsonForDateGrid($goods['data'],$goods['count'],null,null,$goods['searchData']);
+        }else{
+            return $this->sendErrorJson($comGoodsSearch->getMsgStr());
+        }
     }
 
     public function editAction($id=0)
-    {   echo $id;
+    {
+        var_dump( UserRepository::N()->getAdminInfo());
+        var_dump( UserRepository::N()->getAdminInfo());
         return $this->actionRender();
     }
     public function indexAction()
