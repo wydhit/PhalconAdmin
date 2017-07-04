@@ -1,42 +1,26 @@
-这是一个大的项目
-底下分若干有关系的子项目 如 admin   www   api  biz
+不同的子域名分配不同的项目
+底下分若干有关系的子项目 如 admin www api
 每个子项目启用不同的子域名 admin.a.com  www.a.com api.a.com
+每一个子项目可以是单模块 也可以是多模块  也可以多层控制器
+除了共用基层方法和配置文件外 每个项目保持很大的独立性
 每个子域名session不共用
-/static 通用静态资源文件 绑定域名 static.a.com
-    css/
-        main.css
-    js/
-        main.js
-    images/
-    font/
-    其他/
-    download/
-/public  对外目录  所有对外文件都在这里 不对外的禁止存放这里！
-    index.php 入口文件
-    asset/ 专用静态资源文件
-        css/
-            main.css
-        js/
-            main.js
-        images/
-        font/
-        其他/
-        download/
 
-/www_public
-    index.php
-    asset/ 专用静态资源文件
-        css/
-            main.css
-        js/
-            main.js
-        images/
-        font/
-        其他/
-    download/
+###关于配置
+1、公共配置 /common/config 目录下
+    config.php //公共配置 所有子项目都有可能用到的 比如数据库配置
+    local.config.php //本地配置文件 使用git忽略，不提交版本库。 每个开发者需要自己临时配置配置信息时应该在这个文件修改
+2、项目配置
+    项目/config 目录下
+    基本和公共配置一样
+    多了router.php　每个项目路由必定不一样单独路由文件 控制器分层需要这里配置下
+        modules.php　需要多模块这里配置模块
+        loader.php　自定加载器
+
+### 模块名 多层控制器目录  基本控制器名 不能重复 匹配url优先 模块名  其次  多层控制器目录  最后  基本控制器名
 
 
-错误信息处理
+
+###错误信息处理
     1、ajax请求   1、请求返回html页面 url参数带 dataType=html  2、json数据
     2、普通web请求
     {
@@ -46,31 +30,26 @@
         'errinput':'字段错误提示信息'
         'nextUrl':'下一步需要执行跳转的url'
     }
-
     1.1 2处理方式  输出错误信息模板   公共方法   msg('err')
     1.2 输出json 数据          sendJson(status)
     不管哪里输出信息 都是应该结束当前业务 而不是整个框架流程  怎么办？ 通过return 调用方式 可以终结当前业务
-                                                            抛出异常 不好？？？
                                                             return $this->msg()  return $this->sendJson()
 
-
-    重写 application::handle   增加BaseController对于正常模板解析     统一  return $this->render();
-
-
-
+###信息输出
+    ##解析模板输出   return $this->render();$this->actionRender();  控制器分层需要指定控制名称
+    ##json数据输出 return $this->sendJson() 还有两个方便的封装方法
 
 
 
-一般数据储存在mysql 数据库共用
+
+
+###session
 session采用redis   键值：session:项目名:sessionId  如 session:admin:sessionId
 不必要的缓存采用redis  键值： cache:项目名:缓存id  如： cache:admin:缓存id
 不必要的数据 储存在mongo或者文本文件    需要统计分析的mongo  偶尔需要查看的文本文件
 
-
-
-
-
 #### 数据使用规范
+一般数据储存在mysql 数据库共用
 表明 字段名 全部小写用下划线分割
 主键同意id  外键 表明_id
 常用规范
@@ -92,9 +71,3 @@ session采用redis   键值：session:项目名:sessionId  如 session:admin:ses
    1、控制器中尽量避免直接操作模型 尽量通过服务仓库 操作
    2、仅仅是查找数据列表展示 不用orm  直接在仓库$this->modelsManager->createBuilder()创建查询并返回array
    3、涉及到插入 更新 删除数据的操作 一定使用orm 需要连表数据或者连表操作时 使用模型关联 一定不用join
-
-
-
-
-
-

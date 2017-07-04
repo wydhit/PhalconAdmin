@@ -1,0 +1,24 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: wyd
+ * Date: 2017-06-21
+ * Time: 10:07
+ */
+?>
+
+
+<form action="<?php echo $this->url->get('goods/edit')?>" method="post" id="editGoods">
+    <?php echo \Phalcon\Tag::checkField(['asd']) ?>
+    <?php echo $goodForm->render('title') ?>
+    <?php echo $goodForm->render('id') ?>
+    <input type="submit" value="ok">
+</form>
+<script>
+    $("#editGoods").on('submit',function (e) {
+        e.preventDefault();
+        helper.submitByAjax(this);
+        return false;
+    });
+</script>
+

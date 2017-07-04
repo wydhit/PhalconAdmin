@@ -1,0 +1,55 @@
+<?php use Phalcon\Tag;  ?>
+<!-- /.page-content -->
+<div class="page-content" style="padding-top: 3px">
+    <div class="page-header" style="padding: 0;margin:0;">
+        <div id="search_box">
+            <div class="widget-box">
+                <div class="widget-body">
+                    <div class="widget-main" style="padding: 6px">
+                        <form id="searchForGrid" class="form-search form-inline"  data-grid="grid-table">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /.page-header -->
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- PAGE CONTENT BEGINS -->
+            <div id="gridDiv">
+                <table id="grid-table" data-url="<?=$this->url->get('user/index/list')?>"></table>
+                <div id="grid-pager"></div>
+            </div>
+            <!-- PAGE CONTENT ENDS -->
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+</div><!-- /.page-content -->
+<script>
+    var EditUrl='<?=$this->url->get('user/index/edit')?>';
+    $(function ($) {
+        dataGridHelper.show(
+            'grid-table',
+            'grid-pager',
+            ['id', '用户名', '手机号', '操作'],
+            [
+                {name: 'id', index: 'id', sortable: true},
+                {name: 'u_fullname', index: 'u_fullname', width: 60, sortable: true},
+                {name: 'u_mobile', index: 'u_mobile', sortable: true},
+                {
+                    name: 'id', index: 'id', width: 60, sortable: false,
+                    formatter: function (cellvalue, options, rowObject) {
+                        var thisEditUrl = EditUrl +"?id=" +rowObject.id;
+                        return '<input ' +
+                            'type="button" ' +
+                            'value="编辑用户" ' +
+                            'onclick="helper.dialogOpen(this)" ' +
+                            'data-href="' + thisEditUrl + '" ' +
+                            'title="编辑用户" ' +
+                            'class="btn btn-primary btn-sm" />';
+                    }
+                }
+            ],
+            '', '', {'rowNum': 20}
+        );
+    });
+</script>
