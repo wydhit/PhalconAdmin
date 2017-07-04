@@ -1,6 +1,7 @@
 <?php
 namespace Admin\Controllers\Finance;
 use Admin\Controllers\AdminController;
+use Phalcon\Exception;
 
 /**
  * Created by PhpStorm.
@@ -12,6 +13,9 @@ class IndexController extends AdminController
 {
     public function indexAction()
     {
+
+        echo $a;
+
         return $this->actionRender([],'finance/index');
     }
 

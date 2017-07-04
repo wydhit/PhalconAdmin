@@ -15,7 +15,7 @@ use Phalcon\Mvc\View;
 use Phalcon\Session\Adapter\Files as SessionAdapter;
 use Common\Core\Cookies;
 use \Common\Core\Bootstrap as BaseBootstrap;
-use function Sodium\add;
+
 
 class Bootstrap extends BaseBootstrap
 {
@@ -27,6 +27,10 @@ class Bootstrap extends BaseBootstrap
         $this->projectPath = PROJECT_PATH;
         $this->initConfig();
         define('APP_DEBUG', $this->config->get('debug', false));
+        if(APP_DEBUG){
+            $debug=new \Common\Core\Debug();
+            $debug->listen(true,true);
+        }
         $this->registerService();
 
     }

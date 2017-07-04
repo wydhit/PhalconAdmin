@@ -1,0 +1,7 @@
+这个用作公共资源目录
+绑定域名 assets.a.com
+
+主要包括
+    前段js css fonts images 等等 在assets目录下
+    系统上传的图片 附件 在upload目录下 各个子项目统一上传到这里
+
