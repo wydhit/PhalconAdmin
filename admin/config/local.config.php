@@ -5,7 +5,7 @@ return new Phalcon\Config([
     'adminParam'=>['a'],
     'application'=>[
     ],
-    'debug'=>false
+    'debug'=>true
 ]);
 
 

@@ -1,5 +1,6 @@
 <?php
 namespace Common\Models;
+use \Phalcon\Validation;
 
 
 /**
@@ -151,9 +152,15 @@ class WeGoods extends BaseModel
      */
     public function initialize()
     {
+
         $this->setSchema("magiclamp");
     }
 
+    public function validation()
+    {
+        $validator=new Validation();
+        return $this->validate($validator);
+    }
     /**
      * Allows to query a set of records that match the specified conditions
      *

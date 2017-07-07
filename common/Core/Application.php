@@ -18,7 +18,7 @@ class Application extends phalconApplication
     }
 
     /*调试用*/
-    public function handle($uri = null)
+    public function handleX($uri = null)
     {
         $di = $this->getDI();
         /**
@@ -27,7 +27,9 @@ class Application extends phalconApplication
         $router = $di->getShared('router');
         $router->handle($uri);
         $matchedRoute = $router->getMatchedRoute();
-       // var_dump($router->getRoutes());
+        echo '<pre>';
+        var_dump($matchedRoute);
+
 
 
         if (gettype($matchedRoute) === 'object') {

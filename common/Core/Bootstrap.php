@@ -2,9 +2,15 @@
 
 namespace Common\Core;
 
+use Admin\Modules\User\Models\User;
 use Phalcon\Config;
 use Phalcon\Di;
 use Phalcon\DiInterface;
+use Phalcon\DispatcherInterface;
+use Phalcon\Events\Event;
+use Phalcon\Events\Manager;
+use Phalcon\Mvc\Dispatcher;
+use Phalcon\Mvc\Model;
 
 class Bootstrap
 {
@@ -22,19 +28,30 @@ class Bootstrap
      * @var $di DiInterface
      */
     public $di = null;
+
     /*注册基本服务*/
     public function registerService()
     {
         $di = new Di\FactoryDefault();
         $config = $this->config;
         $di->setShared('config', $config);
+        /*事件管理器*/
+        $di->setShared('eventManager', function () {
+            $eventManager = new \Phalcon\Events\Manager();
+            $eventManager->attach('db:afterQuery',function ($obj){
+            });
+            return $eventManager;
+        });
         /*数据库服务*/
         $di->setShared('db', function () use ($config) {
             $dbConfig = $config->get('database')->toArray();
             $adapter = $dbConfig['adapter'];
             unset($dbConfig['adapter']);
             $class = 'Phalcon\Db\Adapter\Pdo\\' . $adapter;
-            return new $class($dbConfig);
+            $class = Mysql::class;
+            $db= new $class($dbConfig);
+            $db->setEventsManager($this->get('eventManager'));
+            return $db;
         });
         /*路由服务*/
         $di->setShared('router', function () use ($di) {
@@ -78,11 +95,56 @@ class Bootstrap
             $cache = new \Phalcon\Cache\Backend\File($frontCache, ['cacheDir' => $cacheDir]);
             return $cache;
         });
-        /*事件管理器*/
-        $di->setShared('eventManager', function () {
-            $eventManager = new \Phalcon\Events\Manager();
-            return $eventManager;
+        $di->setShared('dispatcher', function () use ($di) {
+            $eventManager = new Manager();
+            $eventManager->attach('dispatch:beforeDispatchLoop', function (Event $event, Dispatcher $dispatcher) use ($di) {
+                $controllerName = $dispatcher->getControllerClass();
+                $actionName = $dispatcher->getActiveMethod();
+                if (!method_exists($controllerName, $actionName)) {
+                    return true;
+                }
+                $ref = new \ReflectionMethod($controllerName, $actionName);
+                $parameters = $ref->getParameters();
+                $params = [];
+                foreach ($parameters as $k => $parameter) {
+                    if (isset($parameter->getClass()->name)) {//类形式的 类型约束
+                        $className = $parameter->getClass()->name;
+                        /*如果继承Model 特殊处理下*/
+                        if (is_subclass_of($className, Model::class)) {
+                            $id = $dispatcher->getParam($k, 'int', 0);
+                            if ($id) {
+                                $model = $className::findFirst($id);
+                            } else {
+                                $model = null;
+                            }
+                            if ($model instanceof Model) {
+                                $params[] = $model;
+                            } elseif ($parameter->allowsNull()) {
+                                $params[] = null;
+                            } else {
+                                $params[] = $di->get($className);
+                            }
+                        } else {
+                            $classNames = explode('\\', $className);
+                            $defaultService = strtolower(end($classNames));
+                            /*看看是不是默认的几个基本服务*/
+                            if ($di->has($defaultService)) {
+                                $params[] = $di->getShared($defaultService);
+                            } else {
+                                $params[] = $di->getShared($className, [$dispatcher->getParam($k)]);
+                            }
+                        }
+                    } else {
+                        $params[] = $dispatcher->getParam($k);
+                    }
+                }
+                $dispatcher->setParams($params);
+            });
+            $dispatcher = new Dispatcher();
+            $dispatcher->setEventsManager($eventManager);
+            return $dispatcher;
         });
+
         return $di;
     }
 

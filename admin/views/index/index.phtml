@@ -1,4 +1,9 @@
-<?php use Phalcon\Tag;  ?>
+<?php
+
+use Phalcon\Tag;
+use \Common\Tags\CommonTags;
+
+?>
 <!-- /.page-content -->
 <div class="page-content" style="padding-top: 3px">
     <div class="page-header" style="padding: 0;margin:0;">
@@ -6,23 +11,31 @@
             <div class="widget-box">
                 <div class="widget-body">
                     <div class="widget-main" style="padding: 6px">
-                        <form id="searchForGrid" class="form-search form-inline"  data-grid="grid-table">
+                        <form id="searchForGrid" class="form-search form-inline" data-grid="grid-table">
                             <?php echo Tag::selectStatic([
-                                    'isgroup',
-                                    'class'=>'form-control input-small'
-                                    ],[''=>'组合类型','1'=>'组合','0'=>'非组合'])?>
-                            <input type="text" name="title" id="title" class="form-control input-large  search-query" placeholder="商品名称"/>
+                                'isgroup',
+                                'class' => 'form-control input-small'
+                            ], ['' => '组合类型', '1' => '组合', '0' => '非组合']) ?>
+                            <input type="text"
+                                   name="title"
+                                   id="title"
+                                   class="form-control input-large  search-query"
+                                   placeholder="商品名称"/>
                             <button type="submit" id="mysearch_button" class="btn btn-purple btn-sm ">
                                 搜索<i class="icon-search icon-on-right bigger-110"></i>
                             </button>
-                            <?php echo \Common\Forms\CommonForm::datePicker('add'); ?>
-                            <?php echo \Common\Forms\CommonForm::datePicker('add1'); ?>
-                            <?php echo \Common\Forms\CommonForm::datePicker('add12'); ?>
-                            <a href="#">
-                                <button type="button" title="添加商品" class="btn btn-purple btn-sm pull-right ">
-                                    添加商品<i class="icon-plus-sign icon-on-right bigger-110"></i>
-                                </button>
-                            </a>
+                            <?php echo CommonTags::datePicker('add'); ?>
+                            <?php echo CommonTags::datePicker('add1'); ?>
+                            <?php echo CommonTags::datePicker('add12'); ?>
+
+                            <button type="button"
+                                    title="添加商品"
+                                    data-href="<?php echo $this->url->get('goods/add') ?>"
+                                    class="btn btn-purple btn-sm pull-right"
+                                    onclick="helper.dialogOpen(this)">
+                                添加商品<i class="icon-plus-sign icon-on-right bigger-110"></i>
+                            </button>
+
                         </form>
                     </div>
                 </div>
@@ -33,7 +46,7 @@
         <div class="col-xs-12">
             <!-- PAGE CONTENT BEGINS -->
             <div id="gridDiv">
-                <table id="grid-table" data-url="<?=$this->url->get('goods/list')?>"></table>
+                <table id="grid-table" data-url="<?= $this->url->get('goods/list') ?>"></table>
                 <div id="grid-pager"></div>
             </div>
             <!-- PAGE CONTENT ENDS -->
@@ -41,22 +54,22 @@
     </div><!-- /.row -->
 </div><!-- /.page-content -->
 <script>
-//    $('#grid-table').trigger("reloadGrid"); //重新载入
-    var EditUrl='<?=$this->url->get('goods/edit/')?>';
+    //    $('#grid-table').trigger("reloadGrid"); //重新载入
+    var EditUrl = '<?=$this->url->get('goods/edit/')?>';
 
     $(function ($) {
-       dataGridHelper.show(
+        dataGridHelper.show(
             'grid-table',
             'grid-pager',
             ['预览图', '商品ID', '标题', '操作'],
             [
-                {name: 'preimg', index: 'preimg', sortable: false},
+                {name: 'preimg', index: 'preimg', width: 40, sortable: false},
                 {name: 'id', index: 'id', width: 60, sortable: true},
                 {name: 'title', index: 'title', sortable: false},
                 {
                     name: 'id', index: 'id', width: 60, sortable: false,
                     formatter: function (cellvalue, options, rowObject) {
-                        var thisEditUrl = EditUrl +"?id=" +rowObject.goodsid;
+                        var thisEditUrl = EditUrl + rowObject.goodsid;
                         return '<input ' +
                             'type="button" ' +
                             'value="编辑商品" ' +
@@ -67,7 +80,21 @@
                     }
                 }
             ],
-            '', '', {'rowNum': 20}
+            '',
+            '',
+            {
+                'rowNum': 20,
+                'gridComplete': function () {
+                    $('[data-rel=tooltip]').tooltip({
+                        track: true,
+                        content: function () {
+                            var imgSrc = $(this).find('img').attr('src');
+                            return '<img src="' + imgSrc + '">';
+                        }
+                    });
+                }
+            }
         );
+
     });
 </script>

@@ -18,28 +18,54 @@ class GoodsController extends AdminController
 
     public function listAction()
     {
-        $comGoodsSearch=ComGoodsSearch::N();
-        $goods= $comGoodsSearch->comGoodsListForGrid($this->request);
-        if($goods){
-            $this->logger->alert(json_encode($this->request->get(null)));
-            return $this->sendJsonForDateGrid($goods['data'],$goods['count'],null,null,$goods['searchData']);
-        }else{
+        $comGoodsSearch = ComGoodsSearch::N();
+        $goods = $comGoodsSearch->comGoodsListForGrid($this->request);
+        if ($goods) {
+            return $this->sendJsonForDateGrid($goods['data'], $goods['count'], null, null, $goods['searchData']);
+        } else {
             return $this->sendErrorJson($comGoodsSearch->getMsgStr());
         }
     }
 
-    public function editAction()
+    public function editAction(WeGoods $goods = null)
     {
-        $goodsid=$this->request->get('id','int');
-        $good=WeGoods::findFirst($goodsid);
-        if ($this->request->isAjax() && $this->request->get('dataType')!=='html'){
+        if ($this->request->isAjax() && $this->request->get('dataType') !== 'html') {
+            if (empty($goods)) {
+                return $this->sendErrorJson('参数错误');
+            }
+            $goods->assign($this->request->getPost(null));
+            if ($goods->save()) {
+                return $this->sendSuccessJson('执行成功1');
+            } else {
+                return $this->sendErrorJson('修改失败');
+            }
 
-        }else{
-            $goodForm=new GoodsForm();
-            $this->addData('goodForm',$goodForm);
+        } else {
+            if ($goods === null) {
+                return $this->msg('参数错误', '', '', false);
+            }
+            $this->addData('goods', $goods);
+            $this->tag->setDefaults($goods->toArray());
             return $this->actionRender();
         }
     }
+
+    public function addAction(WeGoods $goods)
+    {
+
+        if ($this->request->isAjax() && $this->request->get('dataType') !== 'html') {
+            $goods->assign($this->request->getPost(null));
+            if ($goods->save()) {
+                return $this->sendSuccessJson('执行成功1');
+            } else {
+                return $this->sendErrorJson('修改失败');
+            }
+        } else {
+            return $this->actionRender();
+        }
+
+    }
+
     public function indexAction()
     {
         return $this->actionRender();

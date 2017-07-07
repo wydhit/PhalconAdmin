@@ -136,12 +136,21 @@ class WeComgoods extends BaseModel
      * @Column(type="integer", length=1, nullable=true)
      */
     public $type;
+    protected $aaaaa;
 
     /**
      * Initialize method for model.
      */
     public function initialize()
     {
+        $this->hasOne('goodsid','Common\Models\WeGoods','id',['alias'=>'goods']);
+//        $this->hasMany('goodsid','Common\Models\WeGoods','id',['alias'=>'goods']);
+//        $this->hasManyToMany("id",
+//                 "Common\Models\WeGoods",
+//                 "robots_id",
+//                 "parts_id",
+//                 "Parts",
+//                 "id");
         $this->setSchema("magiclamp");
     }
 

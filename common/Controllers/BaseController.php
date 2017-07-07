@@ -34,9 +34,9 @@ class BaseController extends Controller
     protected function addTitle($title, $clear = false)
     {
         if ($clear) {
-            $this->view->title = $title;
+            $this->tag->setTitle($title);
         } else {
-            $this->view->title .= $title;
+            $this->tag->prependTitle($title);
         }
     }
 
@@ -130,10 +130,14 @@ class BaseController extends Controller
     }
 
     /*视图模板相关end*/
-    public function msg($message = '', $url = '', $time = '')
+    public function msg($message = '', $url = '', $time = '',$inDialog=false)
     {
-        return $this->render(compact('message', 'url', 'time'), 'msg', 'msg');
+        if($inDialog){
+            return $this->actionRender(compact('message', 'url', 'time'), 'msg', 'msg');
+        }
+        return $this->Render(compact('message', 'url', 'time'), 'msg', 'msg');
     }
+
 
     /**
      * 给前段datagrid发送标准化数据

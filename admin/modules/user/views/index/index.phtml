@@ -38,7 +38,7 @@
                 {
                     name: 'id', index: 'id', width: 60, sortable: false,
                     formatter: function (cellvalue, options, rowObject) {
-                        var thisEditUrl = EditUrl +"?id=" +rowObject.id;
+                        var thisEditUrl = EditUrl +"/" +rowObject.id;
                         return '<input ' +
                             'type="button" ' +
                             'value="编辑用户" ' +

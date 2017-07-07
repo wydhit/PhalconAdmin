@@ -1,15 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: wyd
- * Date: 2017-06-23
- * Time: 17:31
- */
-
-namespace Common\Forms;
+namespace Common\Tags;
 
 
-class CommonForm
+use Phalcon\Tag;
+
+class CommonTags extends Tag
 {
     public static function datePicker($name = '', $value = '')
     {
@@ -44,8 +39,5 @@ class CommonForm
                ";
 
     }
-
-
-
 
 }

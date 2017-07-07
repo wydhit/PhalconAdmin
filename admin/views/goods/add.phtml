@@ -1,11 +1,19 @@
 <?php
-use \Phalcon\Tag;
+/**
+ * Created by PhpStorm.
+ * User: wyd
+ * Date: 2017-06-21
+ * Time: 10:07
+ */
 ?>
 
 
-<form action="<?php echo $this->url->get('goods/edit/'.$goods->id) ?>" method="post" id="editGoods">
-    <?php echo Tag::textField(['title']) ?>
-    <?php echo Tag::textField(['ic']) ?>
+<form action="<?php echo $this->url->get('goods/add') ?>" method="post" id="editGoods">
+    <?php echo $goodForm->render('id') ?>
+    <br/>
+    <?php echo $goodForm->render('title') ?> <br/>
+    <?php echo $goodForm->render('ic') ?> <br/>
+    <?php echo $goodForm->render('content') ?> <br/>
     <input type="submit" value="ok">
 </form>
 <script>

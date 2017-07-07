@@ -9,6 +9,7 @@
 namespace Common\Search;
 
 
+use Common\Models\WeComgoods;
 use Common\Traits\SearchForGrid;
 use Phalcon\Http\Request;
 use Phalcon\Paginator\Adapter\QueryBuilder;
@@ -21,6 +22,10 @@ class ComGoodsSearch extends BaseSearch
 
     public function comGoodsListForGrid(Request $request)
     {
+
+//        foreach ($comGoods as $comGood) {
+//            $comGood->goods->id;
+//        }
 //        $cacheKey=md5(serialize($this->searchData).$this->sord.$this->page.$this->sidx.$this->rows);
 //        if($cacheContent=$this->cache->get($cacheKey,10)){
 //            return $cacheContent;
@@ -50,12 +55,16 @@ class ComGoodsSearch extends BaseSearch
 
         /*通用处理方式*/
         $builder->orderBy("$this->sidx $this->sord");
+
         $paginator = (new QueryBuilder([
             "builder" => $builder,
             "limit" => $this->rows,
             "page" => $this->page
         ]))->getPaginate();
-        $this->gridReturnData = $paginator->items->toArray();
+        $this->gridReturnData = $paginator->items->filter(function ($data){
+            $data->preimg="<img  data-rel=\"tooltip\" data-placement=\"left\" src='{$data->preimg}' width='50' />";
+            return $data;
+        });
         $this->gridReturnCount = $paginator->total_items;
 //        $this->cache->save($cacheKey,$this->returnGridData(),10);
         return $this->returnGridData();

@@ -15,6 +15,7 @@ use Phalcon\Paginator\Adapter\QueryBuilder;
 
 class TopUserSearch extends BaseSearch
 {
+
     public function TopUserForGrid( Request $request)
     {
         $this->searchParamInit($request);

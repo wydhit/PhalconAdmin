@@ -38,7 +38,7 @@ class Bootstrap extends BaseBootstrap
 
     public function run()
     {
-        $application = new Application($this->di);
+        $application = new \Common\Core\Application($this->di);
         $application->useImplicitView(false);
         $this->allModules=require(PROJECT_PATH.'config/modules.php');
         if($this->allModules){
@@ -56,10 +56,10 @@ class Bootstrap extends BaseBootstrap
     public function initConfig()
     {
         /*缓存配置文件*/
-//        $configCacheFile=$this->projectPath . '/config/configCache.php';
-//        if(file_exists($configCacheFile)){
-//            $config= new Config(require $configCacheFile);
-//        }else{
+       $configCacheFile=$this->projectPath . '/config/configCache.php';
+        if(file_exists($configCacheFile)){
+            $config= new Config(require $configCacheFile);
+        }else{
         $config = parent::initConfig();
         if (file_exists($this->projectPath . '/config/config.php')) {
             $tmpConfig = require $this->projectPath . '/config/config.php';
@@ -71,9 +71,9 @@ class Bootstrap extends BaseBootstrap
             $config->merge($tmpConfig);
             unset($tmpConfig);
         }
-        //  file_put_contents($configCacheFile,"<?php\r\n return " . var_export($config->toArray(),true).';');
+          file_put_contents($configCacheFile,"<?php\r\n return " . var_export($config->toArray(),true).';');
 
-//        }
+        }
         $this->config = $config;
         return $config;
     }
@@ -84,7 +84,7 @@ class Bootstrap extends BaseBootstrap
         $dirController=[ 'finance', 'user', 'access'];
         $router = new \Phalcon\Mvc\Router(false);
         $router->removeExtraSlashes(true);
-        $router->setDefaultNamespace('Admin\Controllers');
+        $router->setDefaultNamespace(__NAMESPACE__.'\Controllers');
         $router->setDefaultController('index');
         $router->setDefaultAction('index');
         /*默认路由*/
@@ -115,7 +115,7 @@ class Bootstrap extends BaseBootstrap
                     continue;
                 }
                 $group= new \Phalcon\Mvc\Router\Group([
-                    'namespace' => 'Admin\Controllers\\' . ucfirst($value),
+                    'namespace' => __NAMESPACE__.'\Controllers\\' . ucfirst($value),
                     'controller' => 'index',
                     'action' => 'index'
                 ]);
@@ -131,19 +131,19 @@ class Bootstrap extends BaseBootstrap
         /*多模块路由*/
         foreach ($application->getModules() as $key => $module) {
             $namespace = $module["namespace"];
-            $router->add('/'.$key.'/:params', array(
+            $router->add('/'.$key, array(
                 'namespace' => $namespace,
                 'module' => $key,
                 'controller' => 'index',
                 'action' => 'index',
-                'params' => 1
-            ))->setName($key);
-            $router->add('/'.$key.'/:controller/:params', array(
+                'params' => ''
+            ));
+           $router->add('/'.$key.'/:controller', array(
                 'namespace' => $namespace,
                 'module' => $key,
                 'controller' => 1,
                 'action' => 'index',
-                'params' => 2
+                'params' => ''
             ));
             $router->add('/'.$key.'/:controller/:action/:params', array(
                 'namespace' => $namespace,

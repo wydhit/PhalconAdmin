@@ -92,8 +92,9 @@ var helper = {
         ;
         $('body').append(dialogHtml);
         var dialogObj = $('#' + dialogDivId);
-        var dialog = dialogObj.removeClass('hide').dialog({
-            modal: true,
+        var mydialog = dialogObj.removeClass('hide').dialog({
+            modal: false,
+            closeOnEscape: true,
             width: width,
             height: height,
             position: {my: "center top+40", at: "center top+40"},
@@ -103,12 +104,18 @@ var helper = {
                 {
                     text: "关闭",
                     "class": "btn btn-minier",
-                    click: function () {
-                        $("#" + dialogDivId).remove();
+                    click: function (e) {
                         $(this).dialog("close");
+                        mydialog.dialog( "close" );
+                        $("#" + dialogDivId).remove();
                     }
                 }
-            ]
+            ],
+            close:function (event, ui) {
+                $(this).dialog("close");
+                mydialog.dialog( "close" );
+                $("#" + dialogDivId).remove();
+            }
         });
         if (href) {
             dialogObj.load(href, {'dataType': 'html'});

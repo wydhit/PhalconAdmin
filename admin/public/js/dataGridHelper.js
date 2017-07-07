@@ -3,9 +3,7 @@
  */
 
 var dataGridHelper = {
-    'gridSelectorAll':{
-
-    },
+    'gridSelectorAll': {},
     //switch element when editing inline
     'aceSwitch': function (cellvalue, options, cell) {
         setTimeout(function () {
@@ -68,12 +66,12 @@ var dataGridHelper = {
             $('.ui-jqdialog').remove();
         });
     },
-    'show':function (grid_selectors,pager_selectors,colNames,colModel,loadCompleteFn,loadCompleteErrorFn,options) {
-         var grid_selector = "#"+grid_selectors;
-         var pager_selector = "#"+pager_selectors;
+    'show': function (grid_selectors, pager_selectors, colNames, colModel, loadCompleteFn, loadCompleteErrorFn, options) {
+        var grid_selector = "#" + grid_selectors;
+        var pager_selector = "#" + pager_selectors;
         var dataUrl = $(grid_selector).data('url');
         dataGridHelper.gridAutoWidth(grid_selector);
-        var gridConfig={
+        var gridConfig = {
             url: dataUrl,//请求数据地址
             mtype: 'GET',//请求数据方式
             datatype: "json",
@@ -112,15 +110,14 @@ var dataGridHelper = {
             emptyrecords: '<span style="color:red;font-weight: bold"> 没有数据</span>',//查询不到数据时显示的文字
             loadtext: '正在查询数据...'//执行ajax请求时显示的文字
         };
-        if(options){
-            for(var key in options){
-                gridConfig[key]=options[key];
+        if (options) {
+            for (var key in options) {
+                gridConfig[key] = options[key];
             }
         }
-        var grid=$(grid_selector).jqGrid(gridConfig);
-        dataGridHelper.afterGrid(grid_selector,pager_selector);
-        this.gridSelectorAll[grid_selectors]=grid;
-
+        var grid = $(grid_selector).jqGrid(gridConfig);
+        dataGridHelper.afterGrid(grid_selector, pager_selector);
+        this.gridSelectorAll[grid_selectors] = grid;
         return grid;
     }
 };

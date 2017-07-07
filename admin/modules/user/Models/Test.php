@@ -11,5 +11,9 @@ namespace Admin\Modules\User\Models;
 
 class Test
 {
+    function __construct($value=null)
+    {
+        $this->value=$value;
+    }
 
 }

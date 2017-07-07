@@ -43,10 +43,11 @@
 
 
 
-###session
-session采用redis   键值：session:项目名:sessionId  如 session:admin:sessionId
-不必要的缓存采用redis  键值： cache:项目名:缓存id  如： cache:admin:缓存id
+###session 缓存 log
+session采用redis   键值：项目名:session:sessionId  如 admin:session:sessionId
+不必要的缓存采用redis  键值： 项目名:cache:缓存id  如： admin:cache:缓存id
 不必要的数据 储存在mongo或者文本文件    需要统计分析的mongo  偶尔需要查看的文本文件
+log 储存在mongo或者文本文件    需要统计分析的mongo  偶尔需要查看的文本文件
 
 #### 数据使用规范
 一般数据储存在mysql 数据库共用
@@ -68,6 +69,48 @@ session采用redis   键值：session:项目名:sessionId  如 session:admin:ses
   4.isdel 是否删除 默认0代表正常数据  1代表已被删除
   5.is_***   是否可用等等
 逻辑规范:
-   1、控制器中尽量避免直接操作模型 尽量通过服务仓库 操作
-   2、仅仅是查找数据列表展示 不用orm  直接在仓库$this->modelsManager->createBuilder()创建查询并返回array
-   3、涉及到插入 更新 删除数据的操作 一定使用orm 需要连表数据或者连表操作时 使用模型关联 一定不用join
+   1、控制器中尽量避免直接操作模型 尽量通过Repository 或者 Search操作
+   2、仅仅是查找数据列表展示 不用orm  直接在 Repository 或者 Search $this->modelsManager->createBuilder()创建查询并返回array
+   3、涉及到插入 更新 删除数据的操作 尽量使用orm 需要连表数据或者连表操作时 使用模型关联， 一定不用join
+   4、Model::find  Model::findFirst
+        尽可用于很简单的条件查询  不允许使用join 和  columns
+        需要使用这时俩一般应该用$this->modelsManager->createBuilder()
+   4、一个方法放在Repository还是Model    不使用orm的方法尽量不要放在model中 应放在Repository 或者 Search 使用orm 且内容不是很多的放在Model
+   5、Repository 或者 Search
+        Repository 一般用于业务逻辑处理  如产生订单 处理支付
+        Search 一般用于获取列表形式的信息展示用 主要处理搜索条件
+        Repository::N() 或者 Search::N() 可以直接获取实例 内部通过容器实例化类
+        这俩都继承于Injectable 可以方便的获取容器里的服务 如 $this->db $this->modelsManager $this->session
+数据层
+    $this->db   db层面没有查询构造器 除了insert update delete有简单封装外查询需要手写select
+    基础方法 execute (执行insert update delete等不返回数据的操作)  query (返回数据结果集 后续需要fetch 实际执行pdo结果集类中的fetchAll)
+    插入:insertAsDict insert 对execute等封装
+    修改:updateAsDict update 对execute等封装
+    删除：delete             对execute等封装
+    字段自增值 increment 对updateAsDict等封装
+    字段自减值 decrement 对updateAsDict等封装
+    fetchAll() 对query等封装（实际也是对pdo结果集的操作）
+    fetchOne() 对query等封装（实际也是对pdo结果集的操作）
+    自行封装increment  decrement  decrementAboveZero 方法
+PHQL
+    PHQL依赖Model  实际是Model层的操作了
+    Query 最底层执行phql方法
+    new Query($PHQL)->execute();结果集合
+    new Query($PHQL)->getSingleResult()一条结果
+        执行结果
+            select查询
+            根据columns 给出 Complex 结果集或者 Simple 结果集
+                Complex
+                Simple 只select不完整的字段 集合中每一个元素为Row 否则为完整的Model 对象
+    或者通过模型管理器 createQuery 方法获取Query  模型管理器仅提供new Query 后续还需要execute()
+    模型管理器也提供了 executeQuery 直接给出结果不需要execute()
+    Query\\Builder
+        Query的构造器 最终通过getQuery()获取自动生成的Query实例
+Model层
+    Criteria是find()里的参数构造器  通过Model::query()获取 一般情况下不推荐使用Model::query() 这个效率要慢些
+    find() 实际还是用个模型管理器中  $this->modelsManager->createBuilder() 获取Query再去执行的
+
+PHQL和Model::find  简单的查询条件使用 Model::find 一般用于查找一条数据并修改   复杂的使用PHQL
+
+
+
