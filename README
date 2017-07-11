@@ -20,19 +20,25 @@
 
 
 
+###请求
+    1、ajax请求 get或者post  提交数据用post 返回json数据  请求html页面用get 返回html数据
+    2、普通web请求用 get 返回html数据  一般情况下禁止web post请求
 ###错误信息处理
-    1、ajax请求   1、请求返回html页面 url参数带 dataType=html  2、json数据
-    2、普通web请求
+    信息格式:
     {
-        'status':'sucess|error',
-        'msg':'XXXXX',
-        'data':'前端需要的数据',
-        'errinput':'字段错误提示信息'
-        'nextUrl':'下一步需要执行跳转的url'
+        'status':'sucess|error string',
+        'msg':'XXXXX  string ',
+        'data':'前端需要的数据 array ',
+        'errinput':'字段错误提示信息 ：array'
+        'goUrl':'下一步需要执行跳转的url：string',
+        'param':'其他参数'
     }
+    1、ajax请求
+    2、普通web请求
+
     1.1 2处理方式  输出错误信息模板   公共方法   msg('err')
     1.2 输出json 数据          sendJson(status)
-    不管哪里输出信息 都是应该结束当前业务 而不是整个框架流程  怎么办？ 通过return 调用方式 可以终结当前业务
+    不管哪里输出信息 都是应该结束当前业务  通过return 调用方式 可以终结当前业务
                                                             return $this->msg()  return $this->sendJson()
 
 ###信息输出
@@ -51,8 +57,11 @@ log 储存在mongo或者文本文件    需要统计分析的mongo  偶尔需要
 
 #### 数据使用规范
 一般数据储存在mysql 数据库共用
-表明 字段名 全部小写用下划线分割
-主键同意id  外键 表明_id
+表名 字段名 全部小写用下划线分割
+主键统一使用id  外键 表明_id
+尽量不要允许NULL
+布尔类型的值均以 is、has、exist 或者 can开头
+固定长度的字符串用char不用varchar
 常用规范
   1、时间:int
   time：unix时间戳   start_time：开始时间  end_time 结束时间  create_time 数据创建时间  update_time  数据更新时间
@@ -65,7 +74,7 @@ log 储存在mongo或者文本文件    需要统计分析的mongo  偶尔需要
   3.title：标题 名称   name：姓名    content:内容
     img：图片   pre_img 预览图   big_img 大图  small_img 小图
     keywords：关键词   description：描述
-    other:备注   cls:排序   pid:上级id  ip：ip地址
+    remark,other:备注   list_order,cls:排序   pid:上级id  ip：ip地址
   4.isdel 是否删除 默认0代表正常数据  1代表已被删除
   5.is_***   是否可用等等
 逻辑规范:

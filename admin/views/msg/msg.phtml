@@ -1,9 +1,46 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: wyd
- * Date: 2017-06-21
- * Time: 10:57
- */
-?>
-<?php echo $message ?>
+<?php $time = 2; ?>
+<div class="main-content">
+    <div class="main-content-inner">
+        <div class="row">
+            <div style="width: 50%;margin-left:auto;margin-right:auto;margin-top:20px;">
+                <div class="widget-box">
+                    <div class="widget-header">
+                        <h4 class="smaller text-center">提示信息</h4>
+                    </div>
+                    <div class="widget-body">
+                        <div class="widget-main text-center">
+                            <p class="muted">
+                            <p>
+                                <?php echo $msg; ?>
+                            </p>
+                            <br/>
+                            <?php if (!empty($goUrl)): ?>
+                                <a href='<?php echo $goUrl ?>'><?php echo $time; ?> 秒后跳转，如果浏览器没有反应，请点击此处...</a>
+                                <script type="text/javascript">
+                                    setTimeout(function () {
+                                        location.href = '<?php echo $goUrl;?>';
+                                    },<?php echo $time * 1000?>);
+                                </script>
+                            <?php else: ?>
+                                <?php if ($inDialog): ?>
+                                请刷新重试
+                                <?php else: ?>
+                                <a onclick="history.go(-1)"><?php echo $time; ?> 秒后跳转，如果浏览器没有反应，请点击此处...</a>
+                                <script type="text/javascript">
+                                    setTimeout(function () {
+                                        var URL = "javascript:history.go(-1);";
+                                        location.href = URL;
+                                    },<?php echo $time * 1000?>);
+                                </script>
+                                <?php endif ?>
+
+                            <?php endif; ?>
+                            </p>
+                            <hr/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

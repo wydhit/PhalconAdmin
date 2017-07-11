@@ -16,11 +16,10 @@ use Phalcon\Paginator\Adapter\QueryBuilder;
 class TopUserSearch extends BaseSearch
 {
 
-    public function TopUserForGrid( Request $request)
+    public function TopUserForGrid(Request $request)
     {
         $this->searchParamInit($request);
-        $builder= $this->modelsManager->createBuilder()->from('Common\Models\WeUser');
-        $builder->columns('id,u_mobile,u_fullname');
+        $builder = $this->topUser();
         /*通用处理方式*/
         $builder->orderBy("$this->sidx $this->sord");
         $paginator = (new QueryBuilder([
@@ -30,10 +29,14 @@ class TopUserSearch extends BaseSearch
         ]))->getPaginate();
         $this->gridReturnData = $paginator->items->toArray();
         $this->gridReturnCount = $paginator->total_items;
-//        $this->cache->save($cacheKey,$this->returnGridData(),10);
         return $this->returnGridData();
+    }
 
-
+    public function topUser()
+    {
+        $builder = $this->builder->from('Common\Models\WeUser');
+        $builder->columns('id,u_mobile,u_fullname');
+        return $builder;
     }
 
 }

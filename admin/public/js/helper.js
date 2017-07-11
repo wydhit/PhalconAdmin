@@ -45,6 +45,7 @@ var helper = {
                     url: href,
                     data: data,
                     dataType: 'json',
+                    type:"POST",
                     success: function (backData) {
                         if (backData.status === 'success') {//执行成功
                             bootbox.alert(backData.msg);
@@ -106,19 +107,21 @@ var helper = {
                     "class": "btn btn-minier",
                     click: function (e) {
                         $(this).dialog("close");
-                        mydialog.dialog( "close" );
+                        mydialog.dialog("close");
                         $("#" + dialogDivId).remove();
                     }
                 }
             ],
-            close:function (event, ui) {
+            close: function (event, ui) {
                 $(this).dialog("close");
-                mydialog.dialog( "close" );
+                mydialog.dialog("close");
                 $("#" + dialogDivId).remove();
             }
         });
         if (href) {
-            dialogObj.load(href, {'dataType': 'html'});
+            $.get(href, function (result) {
+                dialogObj.html(result);
+            });
         } else {
             dialogObj.html('没找到数据请求地址href');
         }
@@ -152,7 +155,19 @@ var helper = {
                 bootbox.alert('提交失败，亲重试');
             }
         })
-
+    },
+    formShowError: function (inputerr, form) {
+        var obj;
+        $(".help-block").remove();
+        $(".form-group").removeClass('has-error');
+        for (var ii in inputerr) {
+            if (form !== undefined && form) {
+                obj = $(form).find('#' + ii);
+            } else {
+                obj = $('#' + ii);
+            }
+            obj.focus().parents('.form-group').removeClass('has-info').addClass('has-error').append('<div id="name-error" class="help-block">' + inputerr[ii] + '</div>');
+        }
     }
 };
 helper.init();

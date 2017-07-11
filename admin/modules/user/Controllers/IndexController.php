@@ -18,8 +18,8 @@ class IndexController extends AdminController
     public function indexAction($user, $id = 0, $order)
     {
 
-        $a = new Query('select id as count,c.* from Common\Models\WeGoods as c WHERE id > 0 limit 1', $this->di);
-        $a = $a->execute();
+//        $a = new Query('select id as count,c.* from Common\Models\WeGoods as c WHERE id > 0 limit 1', $this->di);
+//        $a = $a->execute();
 
 
 

@@ -18,4 +18,14 @@ class BaseSearch extends BaseInjectable
     use ErrMsg;
     use SearchForGrid;
 
+    /**
+     * @var $builder \Phalcon\Mvc\Model\Query\BuilderInterface
+     */
+    public $builder;
+
+    public function initialize()
+    {
+        $this->builder=$this->modelsManager->createBuilder();
+    }
+
 }

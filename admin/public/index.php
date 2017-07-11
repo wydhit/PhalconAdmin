@@ -13,31 +13,11 @@ try {
     $bootstrap = new \Admin\Bootstrap($loader);
     $bootstrap->run();
 } catch (\Exception $e) {//最外层异常
-    $request = (new\Phalcon\Di\FactoryDefault())->get('request');
-    $message = "message：" . $e->getMessage() . "<hr>";
-    $message .= "line：" . $e->getLine() . "<hr>";
-    $message .= 'Trace:<br/>' . str_replace("#", "<br/>#\r\n", $e->getTraceAsString());
-    file_put_contents(
-        PROJECT_PATH . 'logs/IndexException.logs',
-        "\r\n\r\n-----[" . date("Y-m-d H:i:s") . "]-------\r\n" . $message . "\r\n--SERVICE INFO--\r\n" . json_encode($_SERVER) . "\r\n" . json_encode($_POST),
-        FILE_APPEND);
-    //记录日志
-    if (!defined('APP_DEBUG') || empty(APP_DEBUG)) {
-        $message = '服务异常！请重试！';
-    }
-    if ($request->isAjax() && $request->get('dataType') !== 'html') {
-        echo json_encode(['status' => 'error', [], 'msg' => $message]);
-    } else {
-        if (!defined('APP_DEBUG') || empty(APP_DEBUG)) {
-            echo $message;
-        } else {
-            throw $e;
-        }
-    }
+    Common\Core\DoException::doException($e);
 }
 
 /*调试性能用*/
-timeAndMem(microtime(true) - $time1, memory_get_usage() - $m1);
+//timeAndMem(microtime(true) - $time1, memory_get_usage() - $m1);
 function timeAndMem($nowTime = 0, $nowMem = 0)
 {
     $log = __DIR__ . '/../cache/timeAndMem.log';

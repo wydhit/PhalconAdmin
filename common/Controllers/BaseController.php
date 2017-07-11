@@ -8,60 +8,78 @@
 
 namespace Common\Controllers;
 
+use Common\Traits\ControllerValid;
+use Common\Traits\ViewAction;
 use Phalcon\Http\Response;
 use \Phalcon\Mvc\Controller;
-use Phalcon\Mvc\View;
 
 
 class BaseController extends Controller
 {
-
-
-    var $breadCrumb = [];
+    use ViewAction;
+    use ControllerValid;
 
     /**
-     * 增加面包屑导航
-     * @param string $text 显示文字
-     * @param string $url 调转地址
+     * 返回正确执行正确的信息 封装 自动识别是否返回json
+     * @param string $msg
+     * @param array $data
+     * @param array $errInput
+     * @param string $goUrl
+     * @return bool|\Phalcon\Mvc\View|string
      */
-    protected function addBreadcrumb($text = '', $url = '')
+    public function successEnd($msg = '', $data = [], $errInput = [], $goUrl = '')
     {
-
-        $this->breadCrumb[] = ['text' => $text, 'url' => $url];
-        $this->view->breadCrumb = $this->breadCrumb;
-    }
-
-    protected function addTitle($title, $clear = false)
-    {
-        if ($clear) {
-            $this->tag->setTitle($title);
+        if ($this->request->isAjax() && $this->request->isPost()) {/*返回json*/
+            return $this->sendJson('success', $msg, $data, $errInput, $goUrl);
         } else {
-            $this->tag->prependTitle($title);
+            return $this->msg('success', $msg, $data, $errInput, $goUrl);
         }
     }
-
-    protected function addProjectTitle($title = '')
+    /**
+     * 返回执行错误的信息 封装 自动识别是否返回json
+     * @param string $msg
+     * @param array $data
+     * @param array $errInput
+     * @param string $goUrl
+     * @return bool|\Phalcon\Mvc\View|string
+     */
+    public function errorEnd($msg = '', $data = [], $errInput = [], $goUrl = '')
     {
-        $this->view->projectTitle = $title;
+        if ($this->request->isAjax() && $this->request->isPost()) {/*返回json*/
+            return $this->sendJson('error', $msg, $data, $errInput, $goUrl);
+        } else {
+            return $this->msg('error', $msg, $data, $errInput, $goUrl);
+        }
     }
-
-    /*返回json相关*/
+    /**
+     * 返回错误json数据
+     * @param string $msg
+     * @param array $data
+     * @param array $errInput
+     * @return string
+     */
     public function sendErrorJson($msg = '', $data = [], $errInput = [])
     {
         return $this->sendJson('error', $msg, $data, $errInput);
     }
-
+    /**
+     * 返回正确的json数据
+     * @param string $msg
+     * @param array $data
+     * @param array $errInput
+     * @return string
+     */
     public function sendSuccessJson($msg = '', $data = [], $errInput = [])
     {
         return $this->sendJson('success', $msg, $data, $errInput);
     }
-
     /**
-     * 返回json数据
-     * @param string $status 状态 约定只能是error 或者sucess
+     * 返回json数据 通用方法
+     * @param string $status 状态 约定只能是error 或者success
      * @param string|array $msg //返回的信息
      * @param array $data //返回的数据
      * @param array $errInput //字段错误信息
+     * @param $goUrl string 跳转的url
      * @return string
      */
     public function sendJson($status = 'error', $msg = '', $data = [], $errInput = [], $goUrl = '')
@@ -74,68 +92,25 @@ class BaseController extends Controller
         }
         return $this->response->setJsonContent(compact('status', 'msg', 'data', 'errInput', 'goUrl'));
     }
-
-    /*视图模板相关begin*/
     /**
-     * 向模板添加一条数据
-     * @param string $name
-     * @param string $value
-     */
-    public function addData($name = '', $value = '')
-    {
-        if ($name && is_string($name)) {
-            $this->view->setVar($name, $value);
-        }
-    }
-
-    /**
-     * 向模板批量添加数据
+     * 返回html格式的提示信息
+     * @param string $status
+     * @param string $msg
      * @param array $data
-     */
-    public function addDataS($data = [])
-    {
-        if (!empty($data) && is_array($data)) {
-            $this->view->setVars($data);
-        }
-    }
-
-    /**
-     * 只解析views/controller/action模板即Action View 不包括views下的index及layout
-     * @param array $data
-     * @param string $controllerName
-     * @param string $actionName
+     * @param array $errInput
+     * @param string $goUrl
+     * @param bool $inDialog
      * @return bool|\Phalcon\Mvc\View
      */
-    public function actionRender($data = [], $controllerName = '', $actionName = '')
+    public function msg($status = 'error', $msg = '', $data = [], $errInput = [], $goUrl = '', $inDialog = null)
     {
-        $this->view->setRenderLevel(View::LEVEL_ACTION_VIEW);
-        return $this->render($data, $controllerName, $actionName);
-    }
-
-    /**
-     * 解析模板
-     * @param array $data
-     * @param string $controllerName
-     * @param string $actionName
-     * @return bool|\Phalcon\Mvc\View
-     */
-    public function render($data = [], $controllerName = '', $actionName = '')
-    {
-        $this->addDataS($data);
-        $controllerName = empty($controllerName) ? $this->dispatcher->getControllerName() : $controllerName;
-        $actionName = empty($actionName) ? $this->dispatcher->getActionName() : $actionName;
-        $this->view->start()->render($controllerName, $actionName, $data);
-        $this->view->finish();
-        return $this->view->getContent();
-    }
-
-    /*视图模板相关end*/
-    public function msg($message = '', $url = '', $time = '',$inDialog=false)
-    {
-        if($inDialog){
-            return $this->actionRender(compact('message', 'url', 'time'), 'msg', 'msg');
+        if($inDialog===null){
+            $inDialog=$this->request->get('inDialog');
         }
-        return $this->Render(compact('message', 'url', 'time'), 'msg', 'msg');
+        if ($inDialog) {
+            return $this->actionRender(compact('status', 'msg', 'data', 'errInput', 'goUrl','inDialog'), 'msg', 'msg');
+        }
+        return $this->Render(compact('status', 'msg', 'data', 'errInput', 'goUrl','inDialog'), 'msg', 'msg');
     }
 
 
@@ -148,7 +123,6 @@ class BaseController extends Controller
      * @param $searchData array 其他附加数据
      * @return  Response;
      */
-
     public function sendJsonForDateGrid($data = [], $records = 0, $page = null, $total = null, $searchData = [])
     {
         /*当前页记录数据*/
@@ -180,13 +154,11 @@ class BaseController extends Controller
 
     public function notFoundAction()
     {
-
         $message = '请求地址不存在';
-        if ($this->request->isAjax() && $this->request->get('dataType') !== 'html') {
+        if ($this->request->isAjax() && $this->request->isPost()) {
             return $this->sendErrorJson($message);
         } else {
             return $message;
         }
     }
-
 }

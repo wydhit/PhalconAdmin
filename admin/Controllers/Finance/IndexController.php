@@ -14,7 +14,9 @@ class IndexController extends AdminController
     public function indexAction()
     {
 
-        echo $a;
+
+        $this->validationInput($this->request);
+
 
         return $this->actionRender([],'finance/index');
     }

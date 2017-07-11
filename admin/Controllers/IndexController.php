@@ -7,6 +7,8 @@ use Common\Controllers\BaseController;
 use Common\Models\WeComgoods;
 use Common\Models\WeOrder;
 use Phalcon\Http\Request;
+use Phalcon\Image;
+use Phalcon\Image\Adapter\Imagick;
 
 
 class IndexController extends AdminController
@@ -14,7 +16,21 @@ class IndexController extends AdminController
 
     public function indexAction()
     {
-       
+//        $as=$this->db->fetchAll('select * from we_hotelguestinfo  WHERE orderid=17173');
+//
+//
+//        foreach ($as as $a) {
+//           echo '<img width=16% src="data:image/png;base64,'.$a['guestimg'].'">';
+//           echo '<img width=16% src="data:image/png;base64,'.$a['guestphoto'].'">';
+//
+////            file_put_contents('img',base64_decode($a['guestimg']));
+////            file_put_contents('img',base64_decode($a['guestphoto']));
+////            $img=new \Phalcon\Image\Adapter\Gd(PROJECT_PATH.'public/img');
+////            echo $img->getMime();
+//
+//        }
+
+
 
 
 

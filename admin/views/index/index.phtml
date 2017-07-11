@@ -69,7 +69,7 @@ use \Common\Tags\CommonTags;
                 {
                     name: 'id', index: 'id', width: 60, sortable: false,
                     formatter: function (cellvalue, options, rowObject) {
-                        var thisEditUrl = EditUrl + rowObject.goodsid;
+                        var thisEditUrl = EditUrl + rowObject.goodsid+"?inDialog=1";
                         return '<input ' +
                             'type="button" ' +
                             'value="编辑商品" ' +

@@ -1,5 +1,7 @@
 <?php
 namespace Common\Models;
+use Phalcon\Validation;
+
 /**
  * WeComgoods
  * 
@@ -137,6 +139,14 @@ class WeComgoods extends BaseModel
      */
     public $type;
     protected $aaaaa;
+
+    public function validation()
+    {
+        /*基本的全字段验证*/
+        $validator= new Validation();
+        $validator->add('title',new Validation\Validator\StringLength(['']));
+        $this->validate($validator);
+    }
 
     /**
      * Initialize method for model.

@@ -5,6 +5,7 @@ namespace Admin\Controllers;
 use Common\Controllers\BaseController;
 use Common\Repository\CommonRepository;
 use Common\Repository\UserRepository;
+use Common\Traits\ViewAction;
 
 class AdminController extends BaseController
 {
@@ -33,12 +34,21 @@ class AdminController extends BaseController
         $this->commonService = $this->di->getShared(CommonRepository::class);
         $this->view->action = $this->action = $this->dispatcher->getActionName();
         $this->view->controller = $this->controller = $this->dispatcher->getControllerName();
-        $this->view->baseUrl =$this->config->application->domain.$this->config->application->baseUri ;
+        $this->view->baseUrl = $this->config->application->domain . $this->config->application->baseUri;
         $this->view->assetUri = $this->assetUri = $this->config->application->assetUri;
         $this->checkLogin();
         $this->addTitle('管理后台');
         $this->addProjectTitle('XXX管理中心');
     }
+
+    public function beforeExecuteRoute()
+    {
+        if ($this->request->isPost()) {
+            if ($this->security->checkToken()) {
+            }
+        }
+    }
+
     /**
      * 检查登录
      */
@@ -62,8 +72,10 @@ class AdminController extends BaseController
         }
     }
 
-    public function noFound()
+
+    public function notFoundAction()
     {
-        
+        return parent::notFoundAction();
+
     }
 }

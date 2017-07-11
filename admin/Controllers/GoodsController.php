@@ -12,6 +12,7 @@ use Common\Forms\GoodsForm;
 use Common\Models\WeGoods;
 use Common\Repository\UserRepository;
 use Common\Search\ComGoodsSearch;
+use Phalcon\Http\Request;
 
 class GoodsController extends AdminController
 {
@@ -27,24 +28,28 @@ class GoodsController extends AdminController
         }
     }
 
-    public function editAction(WeGoods $goods = null)
+
+    public function editAction(WeGoods $goods = null, Request $request)
     {
-        if ($this->request->isAjax() && $this->request->get('dataType') !== 'html') {
-            if (empty($goods)) {
-                return $this->sendErrorJson('参数错误');
+        if ($goods === null) {
+            return $this->errorEnd('参数错误！');
+        }
+        if ($this->request->isPost()) {
+            /*自动调用输入验证器*/
+            $res = $this->validationInput($request->get());
+            if (!empty($res)) {
+                return $this->sendErrorJson('输入有误', [], $res);
             }
-            $goods->assign($this->request->getPost(null));
+            /*保存数据*/
+            $goods->assign($request->get());
             if ($goods->save()) {
                 return $this->sendSuccessJson('执行成功1');
             } else {
                 return $this->sendErrorJson('修改失败');
             }
-
         } else {
-            if ($goods === null) {
-                return $this->msg('参数错误', '', '', false);
-            }
             $this->addData('goods', $goods);
+            $this->addData('validationJs', $this->getValidationRulesForJs());
             $this->tag->setDefaults($goods->toArray());
             return $this->actionRender();
         }
@@ -52,8 +57,7 @@ class GoodsController extends AdminController
 
     public function addAction(WeGoods $goods)
     {
-
-        if ($this->request->isAjax() && $this->request->get('dataType') !== 'html') {
+        if ($this->request->isPost()) {
             $goods->assign($this->request->getPost(null));
             if ($goods->save()) {
                 return $this->sendSuccessJson('执行成功1');

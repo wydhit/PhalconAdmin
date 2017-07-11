@@ -27,10 +27,10 @@ class Bootstrap extends BaseBootstrap
         $this->projectPath = PROJECT_PATH;
         $this->initConfig();
         define('APP_DEBUG', $this->config->get('debug', false));
-        if(APP_DEBUG){
+        /*if(APP_DEBUG){
             $debug=new \Common\Core\Debug();
             $debug->listen(true,true);
-        }
+        }*/
         $this->registerService();
 
     }
