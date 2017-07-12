@@ -16,6 +16,7 @@ class IndexController extends AdminController
 
     public function indexAction()
     {
+
 //        $as=$this->db->fetchAll('select * from we_hotelguestinfo  WHERE orderid=17173');
 //
 //

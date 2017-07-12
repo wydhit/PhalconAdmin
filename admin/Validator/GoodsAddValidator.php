@@ -21,7 +21,7 @@ use Phalcon\Validation\Validator\Regex;
 use Phalcon\Validation\Validator\Url;
 use Phalcon\Validation\Validator\CreditCard;
 
-class GoodsEditValidator extends BaseValidator
+class GoodsAddValidator extends BaseValidator
 {
     /**
      * 增加验证规则

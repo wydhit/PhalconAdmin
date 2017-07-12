@@ -42,6 +42,12 @@ class BaseValidator extends Validation
         "Date" => "日期格式不正确"
     ];
 
+    public function __construct(array $validators = null)
+    {
+        parent::__construct($validators);
+        $this->setDefaultMessages($this->defaultMessages);
+    }
+
     /**
      * 为前端js获取验证规则
      * @return array

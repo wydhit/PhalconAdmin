@@ -73,7 +73,7 @@ var dataGridHelper = {
         dataGridHelper.gridAutoWidth(grid_selector);
         var gridConfig = {
             url: dataUrl,//请求数据地址
-            mtype: 'GET',//请求数据方式
+            mtype: 'POST',//请求数据方式
             datatype: "json",
             colNames: colNames,//列表头显示名
             colModel: colModel,

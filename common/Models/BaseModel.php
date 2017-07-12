@@ -119,4 +119,21 @@ class BaseModel extends Model
         );
     }
 
+    public function getErrInput()
+    {
+        $errinput=[];
+        $messages=$this->getMessages();
+        foreach ($messages as $message) {
+            $field=$message->getField();
+            $msg=$message->getMessage();
+            if(isset($errinput[$field])){
+                $errinput[$field].=$msg."\r\n";
+            }else{
+                $errinput[$field]=$msg."\r\n";
+            }
+        }
+        return $errinput;
+
+    }
+
 }

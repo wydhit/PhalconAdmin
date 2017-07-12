@@ -9,6 +9,8 @@
 namespace Common\Traits;
 
 
+use Common\Core\Exception\UserException;
+
 Trait  ControllerValid
 {
     use BaseTrait;
@@ -27,16 +29,16 @@ Trait  ControllerValid
     }
 
     /**
-     * 自动寻找验证器 并验证输入 如果通过验证则返回空数组  不通过则返回错误信息数组
+     * 自动寻找验证器 并验证输入 如果通过验证则返回true  不通过则抛出异常
      * @param $input
      * @param string $validatorName
-     * @return array
+     * @return true
      */
     public function validationInput($input=[], $validatorName='')
     {
         $validatorName =empty($validatorName)?$this->getValidationName():trim($validatorName);
         if (empty($validatorName)) {
-            return [];
+            return true;
         }
         if(empty($input)){
             $input=$this->request->get();
@@ -58,7 +60,11 @@ Trait  ControllerValid
                 }
             }
         }
-        return $message;
+        if(!empty($message)){
+            throw new UserException('输入有误',[],$message);
+        }
+        return true;
+
     }
     /**
      * 自动寻找验证器

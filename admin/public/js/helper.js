@@ -86,7 +86,7 @@ var helper = {
             '   <div id="dialog-message-loading" >' +
             '       <div style="text-align: center;margin-top: 30px;">' +
             '       <i class="fa fa-spinner fa-spin orange" style="font-size:400%!important"></i> <br>' +
-            '       <p>正在加载....</p> <input type="button" data-href="/s/a" onclick="helper.dialogOpen(this)" value="测试">' +
+            '       <p>正在加载....</p> ' +
             '       </div>' +
             '   </div>' +
             '</div>'

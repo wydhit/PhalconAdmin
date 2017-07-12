@@ -2,12 +2,6 @@
 use \Phalcon\Tag;
 
 ?>
-<style>
-    .require {
-
-    }
-</style>
-
 <form action="<?php echo $this->url->get('goods/edit/' . $goods->id) ?>" method="post" id="editGoods"
       class="form-horizontal">
     <div class="form-group">
@@ -56,7 +50,7 @@ use \Phalcon\Tag;
 </form>
 <script>
     var jqValidateRules =<?php echo (isset($validationJs)&&is_array($validationJs)) ? json_encode($validationJs) : '{}';?> ;
-    jqValidateRules['other'] = '';
+    jqValidateRules['other'] = {};
     console.log(jqValidateRules);
 </script>
 <script>

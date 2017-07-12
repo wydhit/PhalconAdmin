@@ -1,45 +1,118 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: wyd
- * Date: 2017-06-21
- * Time: 10:07
- */
+use \Phalcon\Tag;
+
 ?>
+<form action="<?php echo $this->url->get('goods/add/') ?>" method="post" id="addGoods"
+      class="form-horizontal">
+    <div class="form-group">
+        <label class="col-sm-2 control-label no-padding-right" for="title">名称
+            <small style="color:red;">*</small>
+        </label>
+        <div class="col-sm-5">
+            <?php echo Tag::textField(['title', 'class' => 'col-sm-12']) ?>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label no-padding-right" for="ic">Ic
+            <small style="color:red;">*</small>
+        </label>
+        <div class="col-sm-5">
+            <?php echo Tag::textField(['ic', 'class' => 'col-sm-12']) ?>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label no-padding-right" for="phone">phone
+            <small style="color:red;">*</small>
+        </label>
+        <div class="col-sm-5">
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <i class="ace-icon fa fa-phone"></i>
+                </span>
+                <input class="form-control input-mask-phone " type="text" id="phone"/>
+            </div>
 
-
-<form action="<?php echo $this->url->get('goods/add') ?>" method="post" id="editGoods">
-    <?php echo $goodForm->render('id') ?>
-    <br/>
-    <?php echo $goodForm->render('title') ?> <br/>
-    <?php echo $goodForm->render('ic') ?> <br/>
-    <?php echo $goodForm->render('content') ?> <br/>
-    <input type="submit" value="ok">
+        </div>
+    </div>
+    <div class="hr hr-12"></div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-9">
+            <button class="btn btn-info" type="submit">
+                <i class="ace-icon fa fa-check bigger-110"></i>
+                提交
+            </button>
+            <button class="btn" type="reset">
+                <i class="ace-icon fa fa-undo bigger-110"></i>
+                重置
+            </button>
+        </div>
+    </div>
 </form>
 <script>
-    $("#editGoods").on('submit', function (e) {
-        e.preventDefault();
-        helper.submitByAjax(this, function (json) {
-            /*表格重载*/
-            dataGridHelper.gridSelectorAll['grid-table'].trigger("reloadGrid");
-            bootbox.confirm({
-                message: json.msg,
-                buttons: {
-                    confirm: {label: '继续编辑', className: 'btn-success'},
-                    cancel: {label: '关闭', className: 'btn-danger'}
-                },
-                callback: function (result) {
-                    if (!result) {
-                        /*关闭dialog*/
-                        var dialogId = $('#editGoods').parent().attr('id');
-                        $("#" + dialogId).dialog('close');
+    var jqValidateRules =<?php echo (isset($validationJs)&&is_array($validationJs)) ? json_encode($validationJs) : '{}';?> ;
+    jqValidateRules['other'] = '';
+    console.log(jqValidateRules);
+</script>
+<script>
+    $('#addGoods').validate({
+        errorElement: 'div',
+        errorClass: 'help-block',
+        focusInvalid: true,
+        onsubmit: true,
+        ignore: "",
+        rules: jqValidateRules,
+        messages: {},
+        highlight: function (e) {
+            $(e).closest('.form-group').removeClass('has-info').addClass('has-error');
+        },
+        success: function (e) {
+            $(e).closest('.form-group').removeClass('has-error');//.addClass('has-info');
+            $(e).remove();
+        },
+        errorPlacement: function (error, element) {
+            if (element.is('input[type=checkbox]') || element.is('input[type=radio]')) {
+                var controls = element.closest('div[class*="col-"]');
+                if (controls.find(':checkbox,:radio').length > 1) controls.append(error);
+                else error.insertAfter(element.nextAll('.lbl:eq(0)').eq(0));
+            }
+            else if (element.is('.select2')) {
+                error.insertAfter(element.siblings('[class*="select2-container"]:eq(0)'));
+            }
+            else if (element.is('.chosen-select')) {
+                error.insertAfter(element.siblings('[class*="chosen-container"]:eq(0)'));
+            }
+            else error.insertAfter(element.parent());
+        },
+        submitHandler: function (form) {
+            helper.submitByAjax(form, function (json) {
+                /*表格重载*/
+                dataGridHelper.gridSelectorAll['grid-table'].trigger("reloadGrid");
+                bootbox.confirm({
+                    message: json.msg,
+                    buttons: {
+                        confirm: {label: '继续编辑', className: 'btn-success'},
+                        cancel: {label: '关闭', className: 'btn-danger'}
+                    },
+                    callback: function (result) {
+                        if (!result) {
+                            /*关闭dialog*/
+                            var dialogId = $(form).parent().attr('id');
+                            $("#" + dialogId).dialog('close');
+                        }
                     }
+                });
+            }, function (json) {
+                if (json.msg) {
+                    bootbox.alert(json.msg);
+                }
+                if (json.errInput) {
+                    helper.formShowError(json.errInput, form);
                 }
             });
-
-
-        });
-        return false;
+            return false;
+        },
+        invalidHandler: function (form) {
+        }
     });
 </script>
 

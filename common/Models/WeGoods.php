@@ -1,6 +1,8 @@
 <?php
 namespace Common\Models;
-use \Phalcon\Validation;
+use Common\Core\BaseValidator;
+use \Phalcon\Validation\Validator\PresenceOf;
+use Phalcon\Validation\Validator\StringLength;
 
 
 /**
@@ -158,8 +160,11 @@ class WeGoods extends BaseModel
 
     public function validation()
     {
-        $validator=new Validation();
+        $validator=new BaseValidator();
+        $validator->add('title',new PresenceOf(['message'=>'名称不能为空']));
+        $validator->add('title',new StringLength(['min'=>3,'max'=>100,'messageMaximum'=>'名称不能长于:max字符']));
         return $this->validate($validator);
+
     }
     /**
      * Allows to query a set of records that match the specified conditions

@@ -2,6 +2,8 @@
 
 namespace Admin;
 
+use Common\Core\DoException;
+use Common\Core\HandlerException;
 use Phalcon\Cache\BackendInterface;
 use Phalcon\Config;
 use Phalcon\Debug;
@@ -27,12 +29,7 @@ class Bootstrap extends BaseBootstrap
         $this->projectPath = PROJECT_PATH;
         $this->initConfig();
         define('APP_DEBUG', $this->config->get('debug', false));
-        /*if(APP_DEBUG){
-            $debug=new \Common\Core\Debug();
-            $debug->listen(true,true);
-        }*/
         $this->registerService();
-
     }
 
 
@@ -56,24 +53,23 @@ class Bootstrap extends BaseBootstrap
     public function initConfig()
     {
         /*缓存配置文件*/
-       $configCacheFile=$this->projectPath . '/config/configCache.php';
+       /* $configCacheFile=$this->projectPath . '/config/configCache.php';
         if(file_exists($configCacheFile)){
             $config= new Config(require $configCacheFile);
-        }else{
-        $config = parent::initConfig();
-        if (file_exists($this->projectPath . '/config/config.php')) {
-            $tmpConfig = require $this->projectPath . '/config/config.php';
-            $config->merge($tmpConfig);
-            unset($tmpConfig);
-        }
-        if (file_exists($this->projectPath . '/config/local.config.php')) {
-            $tmpConfig = require($this->projectPath . '/config/local.config.php');
-            $config->merge($tmpConfig);
-            unset($tmpConfig);
-        }
-          file_put_contents($configCacheFile,"<?php\r\n return " . var_export($config->toArray(),true).';');
-
-        }
+        }else{*/
+            $config = parent::initConfig();
+            if (file_exists($this->projectPath . '/config/config.php')) {
+                $tmpConfig = require $this->projectPath . '/config/config.php';
+                $config->merge($tmpConfig);
+                unset($tmpConfig);
+            }
+            if (file_exists($this->projectPath . '/config/local.config.php')) {
+                $tmpConfig = require($this->projectPath . '/config/local.config.php');
+                $config->merge($tmpConfig);
+                unset($tmpConfig);
+            }
+       /*     file_put_contents($configCacheFile, "<?php\r\n return " . var_export($config->toArray(), true) . ';');
+        }*/
         $this->config = $config;
         return $config;
     }

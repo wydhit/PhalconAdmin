@@ -8,6 +8,7 @@
 
 namespace Admin\Controllers;
 
+use Common\Core\Exception\UserException;
 use Common\Forms\GoodsForm;
 use Common\Models\WeGoods;
 use Common\Repository\UserRepository;
@@ -36,16 +37,13 @@ class GoodsController extends AdminController
         }
         if ($this->request->isPost()) {
             /*自动调用输入验证器*/
-            $res = $this->validationInput($request->get());
-            if (!empty($res)) {
-                return $this->sendErrorJson('输入有误', [], $res);
-            }
+            $this->validationInput($request->get());
             /*保存数据*/
-            $goods->assign($request->get());
+            $goods->assign($request->get(), '', ['title']);
             if ($goods->save()) {
                 return $this->sendSuccessJson('执行成功1');
             } else {
-                return $this->sendErrorJson('修改失败');
+                return $this->sendErrorJson('添加失败',[],$goods->getErrInput());
             }
         } else {
             $this->addData('goods', $goods);
@@ -58,16 +56,17 @@ class GoodsController extends AdminController
     public function addAction(WeGoods $goods)
     {
         if ($this->request->isPost()) {
+          $this->validationInput();
             $goods->assign($this->request->getPost(null));
             if ($goods->save()) {
-                return $this->sendSuccessJson('执行成功1');
+                return $this->sendSuccessJson('添加成功1');
             } else {
-                return $this->sendErrorJson('修改失败');
+                return $this->sendErrorJson('添加失败',[],$goods->getErrInput());
             }
         } else {
+            $this->addData('validationJs', $this->getValidationRulesForJs());
             return $this->actionRender();
         }
-
     }
 
     public function indexAction()

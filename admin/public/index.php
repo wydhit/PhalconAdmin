@@ -9,12 +9,12 @@ define('COMMON_PATH', ROOT_PATH . 'common' . DIRECTORY_SEPARATOR);//通用目录
 
 ///*注册自动加载器*/
 $loader = require PROJECT_PATH . 'config/loader.php';
-try {
-    $bootstrap = new \Admin\Bootstrap($loader);
-    $bootstrap->run();
-} catch (\Exception $e) {//最外层异常
-    Common\Core\DoException::doException($e);
-}
+/*注册错误处理*/
+$debug = new \Common\Core\Debug();
+$debug->listen(true, true);
+/*启动系统*/
+$bootstrap = new \Admin\Bootstrap($loader);
+$bootstrap->run();
 
 /*调试性能用*/
 //timeAndMem(microtime(true) - $time1, memory_get_usage() - $m1);
