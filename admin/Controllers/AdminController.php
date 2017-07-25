@@ -2,6 +2,7 @@
 
 namespace Admin\Controllers;
 
+use Admin\Exception\UserNotLoginException;
 use Common\Controllers\BaseController;
 use Common\Repository\CommonRepository;
 use Common\Repository\UserRepository;
@@ -43,10 +44,11 @@ class AdminController extends BaseController
 
     public function beforeExecuteRoute()
     {
-        if ($this->request->isPost()) {
-            if ($this->security->checkToken()) {
-            }
-        }
+
+        //if ($this->request->isPost()) {
+//            if ($this->security->checkToken()) {
+//            }
+        //}
     }
 
     /**
@@ -62,12 +64,7 @@ class AdminController extends BaseController
             if (empty($this->adminInfo) || empty($this->adminId)) {//没有登录去登陆
                 $goUrl = 'admin/login';
                 $this->commonService->setLoginFromUrl($goUrl);
-                if ($this->request->isAjax() && $this->request->get('dataType', 'string', '') !== 'html') {
-                    $this->sendJson('error', '请登录后再试！', [], [], $goUrl);
-                } else {
-                    $this->response->redirect($goUrl);
-                }
-                die();
+                throw new \Common\Exception\UserNotLoginException('需要登录');
             }
         }
     }

@@ -119,9 +119,9 @@ var helper = {
             }
         });
         if (href) {
-            $.get(href, function (result) {
+            $.get(href,{}, function (result) {
                 dialogObj.html(result);
-            });
+            },'html');
         } else {
             dialogObj.html('没找到数据请求地址href');
         }

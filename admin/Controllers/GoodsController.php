@@ -8,10 +8,7 @@
 
 namespace Admin\Controllers;
 
-use Common\Core\Exception\UserException;
-use Common\Forms\GoodsForm;
 use Common\Models\WeGoods;
-use Common\Repository\UserRepository;
 use Common\Search\ComGoodsSearch;
 use Phalcon\Http\Request;
 
@@ -35,7 +32,7 @@ class GoodsController extends AdminController
         if ($goods === null) {
             return $this->errorEnd('参数错误！');
         }
-        if ($this->request->isPost()) {
+        if ($this->request->isPost() && $this->checkCsrfToken()) {
             /*自动调用输入验证器*/
             $this->validationInput($request->get());
             /*保存数据*/
@@ -46,6 +43,7 @@ class GoodsController extends AdminController
                 return $this->sendErrorJson('添加失败',[],$goods->getErrInput());
             }
         } else {
+            $this->setCsrfToken();
             $this->addData('goods', $goods);
             $this->addData('validationJs', $this->getValidationRulesForJs());
             $this->tag->setDefaults($goods->toArray());

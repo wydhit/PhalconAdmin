@@ -1,12 +1,23 @@
 <?php
 
-namespace Admin;
+namespace Api;
+
+use Common\Core\DoException;
+use Common\Core\HandlerException;
+use Phalcon\Cache\BackendInterface;
+use Phalcon\Config;
+use Phalcon\Debug;
+use Phalcon\DiInterface;
 use Phalcon\Loader;
+use Phalcon\Mvc\Application;
+use Phalcon\Mvc\Router;
+use Phalcon\Mvc\Router\Group;
 use Phalcon\Mvc\Url;
 use Phalcon\Mvc\View;
 use Phalcon\Session\Adapter\Files as SessionAdapter;
 use Common\Core\Cookies;
 use \Common\Core\Bootstrap as BaseBootstrap;
+
 
 class Bootstrap extends BaseBootstrap
 {
@@ -14,33 +25,23 @@ class Bootstrap extends BaseBootstrap
     function __construct(Loader $loader)
     {
         $this->loader = $loader;
+        $this->rootPath = ROOT_PATH;
+        $this->projectPath = PROJECT_PATH;
         $this->initConfig();
         define('APP_DEBUG', $this->config->get('debug', false));
-        $this->registerExceptionHandle();
         $this->registerService();
     }
 
-    public function registerExceptionHandle()
-    {
-        /*注册错误处理*/
-        $ExceptionHandler = new \Common\Core\ExceptionHandler();
-        $ExceptionHandler->setDebug(APP_DEBUG);
-        $ExceptionHandler->listen();
-    }
 
     public function run()
     {
         $application = new \Common\Core\Application($this->di);
         $application->useImplicitView(false);
-        $this->allModules=require(PROJECT_PATH.'/config/modules.php');
+        $this->allModules=require(PROJECT_PATH.'config/modules.php');
         if($this->allModules){
             $application->registerModules($this->allModules);
         }
         $this->registerRouter($application);
-        if (APP_DEBUG) {
-            $this->di['app'] = $application;
-            (new \Snowair\Debugbar\ServiceProvider(COMMON_PATH . 'config/debugger_config.php'))->start();
-        }
         $application->handle()->send();
     }
 
@@ -52,13 +53,13 @@ class Bootstrap extends BaseBootstrap
             $config= new Config(require $configCacheFile);
         }else{*/
             $config = parent::initConfig();
-            if (file_exists(PROJECT_PATH . '/config/config.php')) {
-                $tmpConfig = require PROJECT_PATH . '/config/config.php';
+            if (file_exists($this->projectPath . '/config/config.php')) {
+                $tmpConfig = require $this->projectPath . '/config/config.php';
                 $config->merge($tmpConfig);
                 unset($tmpConfig);
             }
-            if (file_exists(PROJECT_PATH . '/config/local.config.php')) {
-                $tmpConfig = require(PROJECT_PATH . '/config/local.config.php');
+            if (file_exists($this->projectPath . '/config/local.config.php')) {
+                $tmpConfig = require($this->projectPath . '/config/local.config.php');
                 $config->merge($tmpConfig);
                 unset($tmpConfig);
             }
@@ -71,7 +72,7 @@ class Bootstrap extends BaseBootstrap
     public function registerRouter($application)
     {
         //控制器分层需要在这里注册下目录 这是url地址出现的字符 为保持命名空间一致 实际目录应该首字母大写
-        $dirController=[ 'finance', 'user', 'access'];
+        $dirController=[/* 'finance', 'userxxx', 'access'*/];
         $router = new \Phalcon\Mvc\Router(false);
         $router->removeExtraSlashes(true);
         $router->setDefaultNamespace(__NAMESPACE__.'\Controllers');
@@ -165,36 +166,12 @@ class Bootstrap extends BaseBootstrap
         $di = parent::registerService();
         /*注册自动加载器方便在别的地方再试使用*/
         $di->setShared('loader', $this->loader);
-        /*视图服务*/
-        $di->setShared('view', function () {
-            $view = new View();
-            $view->setViewsDir(__DIR__ . '/views/');
-            $view->registerEngines(['.phtml' => 'Phalcon\Mvc\View\Engine\Php']);
-            return $view;
-        });
         /*url服务*/
         $di->setShared('url', function () use ($di) {
             $url = new Url();
             $url->setBaseUri($di->get('config')->get('application')->baseUri);
             return $url;
         });
-        /*session*/
-        $di->setShared('session', function () {
-            $session = new SessionAdapter();
-            $session->setName('mcSessionId');
-            $session->start();
-            return $session;
-        });
-        /*cookie*/
-        $di->setShared(
-            'cookies',
-            function () {
-                $cookies = new Cookies();
-                $cookies->setExpire(time() + 24 * 60 * 60);
-                $cookies->useEncryption(true);
-                return $cookies;
-            }
-        );
         $this->di = $di;
     }
 

@@ -1,25 +1,22 @@
 <?php
-
-$time1 = microtime(true);
-$m1 = memory_get_usage();
+define('APP_BEGIN_TIME', microtime(true));
+define('APP_BEGIN_MEMORY', memory_get_usage());
 /*这三个必须定义*/
-define('ROOT_PATH', dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR);//总的根目录
-define('PROJECT_PATH', ROOT_PATH . 'admin' . DIRECTORY_SEPARATOR);//当前项目目录
-define('COMMON_PATH', ROOT_PATH . 'common' . DIRECTORY_SEPARATOR);//通用目录
-
+define('PROJECT_PATH', dirname(__DIR__));//当前项目目录
+define('ROOT_PATH', dirname(PROJECT_PATH));//总的根目录
+define('COMMON_PATH', ROOT_PATH . '/common');//通用目录
 ///*注册自动加载器*/
-$loader = require PROJECT_PATH . 'config/loader.php';
-/*注册错误处理*/
-$debug = new \Common\Core\Debug();
-$debug->listen(true, true);
-/*启动系统*/
+$loader = require PROJECT_PATH . "/config/loader.php";
+///*启动系统*/
 $bootstrap = new \Admin\Bootstrap($loader);
 $bootstrap->run();
-
-/*调试性能用*/
-//timeAndMem(microtime(true) - $time1, memory_get_usage() - $m1);
-function timeAndMem($nowTime = 0, $nowMem = 0)
+//
+///*调试性能用*/
+//timeAndMem();
+function timeAndMem()
 {
+    $nowTime = microtime(true) - APP_BEGIN_TIME;
+    $nowMem = memory_get_usage() - APP_BEGIN_MEMORY;
     $log = __DIR__ . '/../cache/timeAndMem.log';
     $content = file_exists($log) ? file_get_contents($log) : '';
     if ($content) {

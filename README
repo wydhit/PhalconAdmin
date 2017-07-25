@@ -23,7 +23,7 @@
 ###请求
     1、ajax请求 get或者post  提交数据用post 返回json数据  请求html页面用get 返回html数据
     2、普通web请求用 get 返回html数据  一般情况下禁止web post请求
-###错误信息处理
+###交互信息处理
     信息格式:
     {
         'status':'sucess|error string',
@@ -45,6 +45,16 @@
     ##解析模板输出   return $this->render();$this->actionRender();  控制器分层需要指定控制名称
     ##json数据输出 return $this->sendJson() 还有两个方便的封装方法
 
+###异常及错误日志
+    1、错误的处理
+        php7 致命错误转为异常 转为异常处理
+        其它错误:
+        开发环境 所有错误都转为异常
+        正式环境 错误不转为异常 不显示  但是记录错误
+    2、异常处理
+       程序终止执行
+       业务逻辑需要终止执行的时候也通过抛出异常处理 LogicException
+
 
 
 
@@ -53,6 +63,13 @@
 session采用redis   键值：项目名:session:sessionId  如 admin:session:sessionId
 不必要的缓存采用redis  键值： 项目名:cache:缓存id  如： admin:cache:缓存id
 不必要的数据 储存在mongo或者文本文件    需要统计分析的mongo  偶尔需要查看的文本文件
+###日志：
+    异常及错误日志
+    操作日志
+    核心业务日志
+
+
+
 log 储存在mongo或者文本文件    需要统计分析的mongo  偶尔需要查看的文本文件
 
 #### 数据使用规范

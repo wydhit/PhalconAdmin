@@ -14,8 +14,6 @@ use Phalcon\Mvc\Model;
 
 class Bootstrap
 {
-    public $rootPath;
-    public $projectPath;
     /**
      * @var $config Config;
      */
@@ -32,7 +30,7 @@ class Bootstrap
     /*注册基本服务*/
     public function registerService()
     {
-        $di = new Di\FactoryDefault();
+        $di = Di::getDefault();
         $config = $this->config;
         $di->setShared('config', $config);
         /*事件管理器*/

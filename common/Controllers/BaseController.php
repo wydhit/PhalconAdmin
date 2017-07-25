@@ -8,6 +8,7 @@
 
 namespace Common\Controllers;
 
+use Common\Core\Csrf;
 use Common\Traits\ControllerValid;
 use Common\Traits\ViewAction;
 use Phalcon\Http\Response;
@@ -18,6 +19,16 @@ class BaseController extends Controller
 {
     use ViewAction;
     use ControllerValid;
+
+    public function checkCsrfToken($name='')
+    {
+        return Csrf::N()->checkCsrfToken($name);
+    }
+
+    public function setCsrfToken($name='',$outTime=null)
+    {
+        Csrf::N()->setCsrfToken($name,$outTime);
+    }
 
     /**
      * 返回正确执行正确的信息 封装 自动识别是否返回json
@@ -90,6 +101,7 @@ class BaseController extends Controller
         if (is_array($msg)) {
             $msg = join("\r\n", $msg);
         }
+        $this->response->setHeader('Content-type','application/json');
         return $this->response->setJsonContent(compact('status', 'msg', 'data', 'errInput', 'goUrl'));
     }
     /**

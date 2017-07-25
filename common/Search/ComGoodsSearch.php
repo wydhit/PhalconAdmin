@@ -22,14 +22,6 @@ class ComGoodsSearch extends BaseSearch
 
     public function comGoodsListForGrid(Request $request)
     {
-
-//        foreach ($comGoods as $comGood) {
-//            $comGood->goods->id;
-//        }
-//        $cacheKey=md5(serialize($this->searchData).$this->sord.$this->page.$this->sidx.$this->rows);
-//        if($cacheContent=$this->cache->get($cacheKey,10)){
-//            return $cacheContent;
-//        }
         $this->searchParamInit($request);
         /*搜索处理区*/
         $builder = $this->modelsManager->createBuilder()

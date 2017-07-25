@@ -1,7 +1,7 @@
 <?php
 
-if (file_exists(ROOT_PATH . 'vendor/autoload.php')) {
-   include(ROOT_PATH . 'vendor/autoload.php');
+if (file_exists(ROOT_PATH . '/vendor/autoload.php')) {
+   include(ROOT_PATH . '/vendor/autoload.php');
 }
 $loader = new \Phalcon\Loader();
 $loader->registerNamespaces([

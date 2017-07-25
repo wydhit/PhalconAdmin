@@ -36,7 +36,7 @@ class IndexController extends AdminController
 
 
         //$alias='goods';
-       // $comGoods=WeComgoods::findWithAlias($alias,['limit'=>100]);
+        //$comGoods=WeComgoods::findWithAlias($alias,['limit'=>100]);
 //        $comGoods=WeComgoods::find(['limit'=>100]);
        // foreach ($comGoods as $comGood) {
            // echo $comGood->goods->title;
@@ -56,6 +56,7 @@ class IndexController extends AdminController
 //            }
 //       // $this->addData('order', WeOrder::findFirst());
         return $this->render();
+
 
     }
 

@@ -4,6 +4,3 @@ logs/*
 .idea
 admin/modules/config/local.config.php
 vendor/*
-
-
-
