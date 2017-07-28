@@ -1,0 +1,10 @@
+AddDefaultCharset UTF-8
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule _upload\/(.*)$ http://image.ejshendeng.com/_upload/$1 [NC,L]
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_URI} !^.*(\.css|\.js|\.gif|\.png|\.jpg|\.jpeg|\.ico)$
+    RewriteRule ^(.*)$ index.php?_url=/$1 [QSA,L]
+</IfModule>

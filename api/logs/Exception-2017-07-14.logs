@@ -1,0 +1,706 @@
+
+
+-----[2017-07-14 06:27:59]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/53.0.2785.104 Safari\/537.36 Core\/1.53.3103.400 QQBrowser\/9.6.11372.400","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_DNT":"1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/7.1.7","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"50681","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"","REQUEST_URI":"\/","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500013679.773,"REQUEST_TIME":1500013679}
+[]
+
+-----[2017-07-14 06:30:24]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_CACHE_CONTROL":"max-age=0","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/53.0.2785.104 Safari\/537.36 Core\/1.53.3103.400 QQBrowser\/9.6.11372.400","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_DNT":"1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/7.1.7","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"51444","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"","REQUEST_URI":"\/","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500013824.714,"REQUEST_TIME":1500013824}
+[]
+
+-----[2017-07-14 06:30:25]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_CACHE_CONTROL":"max-age=0","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/53.0.2785.104 Safari\/537.36 Core\/1.53.3103.400 QQBrowser\/9.6.11372.400","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_DNT":"1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/7.1.7","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"51444","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"","REQUEST_URI":"\/","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500013825.471,"REQUEST_TIME":1500013825}
+[]
+
+-----[2017-07-14 06:30:25]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/53.0.2785.104 Safari\/537.36 Core\/1.53.3103.400 QQBrowser\/9.6.11372.400","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_DNT":"1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/7.1.7","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"51444","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"","REQUEST_URI":"\/","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500013825.726,"REQUEST_TIME":1500013825}
+[]
+
+-----[2017-07-14 06:30:25]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_CACHE_CONTROL":"max-age=0","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/53.0.2785.104 Safari\/537.36 Core\/1.53.3103.400 QQBrowser\/9.6.11372.400","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_DNT":"1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/7.1.7","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"51444","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"","REQUEST_URI":"\/","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500013825.959,"REQUEST_TIME":1500013825}
+[]
+
+-----[2017-07-14 06:30:26]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_CACHE_CONTROL":"max-age=0","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/53.0.2785.104 Safari\/537.36 Core\/1.53.3103.400 QQBrowser\/9.6.11372.400","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_DNT":"1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/7.1.7","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"51444","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"","REQUEST_URI":"\/","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500013826.244,"REQUEST_TIME":1500013826}
+[]
+
+-----[2017-07-14 06:37:44]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_CACHE_CONTROL":"max-age=0","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/53.0.2785.104 Safari\/537.36 Core\/1.53.3103.400 QQBrowser\/9.6.11372.400","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_DNT":"1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/5.6.31","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"52045","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"","REQUEST_URI":"\/","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500014264.919,"REQUEST_TIME":1500014264}
+[]
+
+-----[2017-07-14 06:37:45]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_CACHE_CONTROL":"max-age=0","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/53.0.2785.104 Safari\/537.36 Core\/1.53.3103.400 QQBrowser\/9.6.11372.400","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_DNT":"1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/5.6.31","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"52045","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"","REQUEST_URI":"\/","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500014265.953,"REQUEST_TIME":1500014265}
+[]
+
+-----[2017-07-14 06:37:50]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_CACHE_CONTROL":"max-age=0","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/5.6.31","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"52086","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"","REQUEST_URI":"\/","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500014269.996,"REQUEST_TIME":1500014269}
+[]
+
+-----[2017-07-14 06:37:50]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_CACHE_CONTROL":"max-age=0","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/5.6.31","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"52086","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"","REQUEST_URI":"\/","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500014270.899,"REQUEST_TIME":1500014270}
+[]
+
+-----[2017-07-14 06:37:51]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_CACHE_CONTROL":"max-age=0","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/5.6.31","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"52086","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"","REQUEST_URI":"\/","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500014271.442,"REQUEST_TIME":1500014271}
+[]
+
+-----[2017-07-14 06:38:35]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_CACHE_CONTROL":"max-age=0","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/53.0.2785.104 Safari\/537.36 Core\/1.53.3103.400 QQBrowser\/9.6.11372.400","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_DNT":"1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/5.6.31","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"52121","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"","REQUEST_URI":"\/","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500014315.001,"REQUEST_TIME":1500014315}
+[]
+
+-----[2017-07-14 06:38:35]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/53.0.2785.104 Safari\/537.36 Core\/1.53.3103.400 QQBrowser\/9.6.11372.400","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_DNT":"1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/5.6.31","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"52121","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"","REQUEST_URI":"\/","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500014315.664,"REQUEST_TIME":1500014315}
+[]
+
+-----[2017-07-14 06:38:35]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_CACHE_CONTROL":"max-age=0","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/53.0.2785.104 Safari\/537.36 Core\/1.53.3103.400 QQBrowser\/9.6.11372.400","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_DNT":"1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/5.6.31","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"52121","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"","REQUEST_URI":"\/","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500014315.864,"REQUEST_TIME":1500014315}
+[]
+
+-----[2017-07-14 06:38:36]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_CACHE_CONTROL":"max-age=0","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/53.0.2785.104 Safari\/537.36 Core\/1.53.3103.400 QQBrowser\/9.6.11372.400","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_DNT":"1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/5.6.31","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"52121","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"","REQUEST_URI":"\/","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500014316.039,"REQUEST_TIME":1500014316}
+[]
+
+-----[2017-07-14 06:38:36]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_CACHE_CONTROL":"max-age=0","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/53.0.2785.104 Safari\/537.36 Core\/1.53.3103.400 QQBrowser\/9.6.11372.400","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_DNT":"1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/5.6.31","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"52121","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"","REQUEST_URI":"\/","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500014316.231,"REQUEST_TIME":1500014316}
+[]
+
+-----[2017-07-14 06:38:36]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/53.0.2785.104 Safari\/537.36 Core\/1.53.3103.400 QQBrowser\/9.6.11372.400","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_DNT":"1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/5.6.31","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"52121","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"","REQUEST_URI":"\/","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500014316.424,"REQUEST_TIME":1500014316}
+[]
+
+-----[2017-07-14 06:38:36]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_CACHE_CONTROL":"max-age=0","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/53.0.2785.104 Safari\/537.36 Core\/1.53.3103.400 QQBrowser\/9.6.11372.400","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_DNT":"1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/5.6.31","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"52121","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"","REQUEST_URI":"\/","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500014316.602,"REQUEST_TIME":1500014316}
+[]
+
+-----[2017-07-14 06:38:36]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_CACHE_CONTROL":"max-age=0","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/53.0.2785.104 Safari\/537.36 Core\/1.53.3103.400 QQBrowser\/9.6.11372.400","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_DNT":"1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/5.6.31","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"52121","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"","REQUEST_URI":"\/","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500014316.775,"REQUEST_TIME":1500014316}
+[]
+
+-----[2017-07-14 06:38:37]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/53.0.2785.104 Safari\/537.36 Core\/1.53.3103.400 QQBrowser\/9.6.11372.400","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_DNT":"1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/5.6.31","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"52121","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"","REQUEST_URI":"\/","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500014317.724,"REQUEST_TIME":1500014317}
+[]
+
+-----[2017-07-14 06:38:37]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/53.0.2785.104 Safari\/537.36 Core\/1.53.3103.400 QQBrowser\/9.6.11372.400","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_DNT":"1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/5.6.31","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"52121","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"","REQUEST_URI":"\/","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500014317.905,"REQUEST_TIME":1500014317}
+[]
+
+-----[2017-07-14 06:38:38]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/53.0.2785.104 Safari\/537.36 Core\/1.53.3103.400 QQBrowser\/9.6.11372.400","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_DNT":"1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/5.6.31","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"52121","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"","REQUEST_URI":"\/","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500014318.072,"REQUEST_TIME":1500014318}
+[]
+
+-----[2017-07-14 06:38:38]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/53.0.2785.104 Safari\/537.36 Core\/1.53.3103.400 QQBrowser\/9.6.11372.400","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_DNT":"1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/5.6.31","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"52121","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"","REQUEST_URI":"\/","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500014318.231,"REQUEST_TIME":1500014318}
+[]
+
+-----[2017-07-14 06:38:39]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_CACHE_CONTROL":"max-age=0","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_USER_AGENT":"Mozilla\/5.0 (Linux; U; Android 5.0.2; zh-cn; Redmi Note 3 Build\/LRX22G) AppleWebKit\/537.36 (KHTML, like Gecko)Version\/4.0 Chrome\/37.0.0.0 MQQBrowser\/7.6 Mobile Safari\/537.36","HTTP_ACCEPT_ENCODING":"gzip, deflate","HTTP_ACCEPT_LANGUAGE":"zh-CN,en-US;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/5.6.31","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"192.168.0.222","SERVER_PORT":"80","REMOTE_ADDR":"192.168.0.108","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"34746","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"","REQUEST_URI":"\/","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500014319.958,"REQUEST_TIME":1500014319}
+[]
+
+-----[2017-07-14 06:38:49]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","CONTENT_LENGTH":"3","HTTP_ACCEPT":"application\/json","HTTP_ORIGIN":"file:\/\/","HTTP_X_REQUESTED_WITH":"XMLHttpRequest","HTTP_USER_AGENT":"Mozilla\/5.0 (Linux; Android 5.0.2; Redmi Note 3 Build\/LRX22G; wv) AppleWebKit\/537.36 (KHTML, like Gecko) Version\/4.0 Chrome\/45.0.2454.95 Mobile Safari\/537.36 Html5Plus\/1.0","CONTENT_TYPE":"application\/x-www-form-urlencoded","HTTP_ACCEPT_ENCODING":"gzip, deflate","HTTP_ACCEPT_LANGUAGE":"zh-CN,en-US;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/5.6.31","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"192.168.0.222","SERVER_PORT":"80","REMOTE_ADDR":"192.168.0.108","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"34747","REDIRECT_URL":"\/index\/index","REDIRECT_QUERY_STRING":"_url=\/index\/index","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"POST","QUERY_STRING":"_url=\/index\/index","REQUEST_URI":"\/index\/index","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500014329.437,"REQUEST_TIME":1500014329}
+{"a":"b"}
+
+-----[2017-07-14 06:39:04]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","CONTENT_LENGTH":"3","HTTP_ACCEPT":"application\/json","HTTP_ORIGIN":"file:\/\/","HTTP_X_REQUESTED_WITH":"XMLHttpRequest","HTTP_USER_AGENT":"Mozilla\/5.0 (Linux; Android 5.0.2; Redmi Note 3 Build\/LRX22G; wv) AppleWebKit\/537.36 (KHTML, like Gecko) Version\/4.0 Chrome\/45.0.2454.95 Mobile Safari\/537.36 Html5Plus\/1.0","CONTENT_TYPE":"application\/x-www-form-urlencoded","HTTP_ACCEPT_ENCODING":"gzip, deflate","HTTP_ACCEPT_LANGUAGE":"zh-CN,en-US;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/5.6.31","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"192.168.0.222","SERVER_PORT":"80","REMOTE_ADDR":"192.168.0.108","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"34748","REDIRECT_URL":"\/index\/index","REDIRECT_QUERY_STRING":"_url=\/index\/index","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"POST","QUERY_STRING":"_url=\/index\/index","REQUEST_URI":"\/index\/index","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500014344.728,"REQUEST_TIME":1500014344}
+{"a":"b"}
+
+-----[2017-07-14 06:40:11]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","CONTENT_LENGTH":"3","HTTP_ACCEPT":"application\/json","HTTP_ORIGIN":"file:\/\/","HTTP_X_REQUESTED_WITH":"XMLHttpRequest","HTTP_USER_AGENT":"Mozilla\/5.0 (Linux; Android 5.0.2; Redmi Note 3 Build\/LRX22G; wv) AppleWebKit\/537.36 (KHTML, like Gecko) Version\/4.0 Chrome\/45.0.2454.95 Mobile Safari\/537.36 Html5Plus\/1.0","CONTENT_TYPE":"application\/x-www-form-urlencoded","HTTP_ACCEPT_ENCODING":"gzip, deflate","HTTP_ACCEPT_LANGUAGE":"zh-CN,en-US;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/5.6.31","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"192.168.0.222","SERVER_PORT":"80","REMOTE_ADDR":"192.168.0.108","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"34749","REDIRECT_URL":"\/index\/index","REDIRECT_QUERY_STRING":"_url=\/index\/index","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"POST","QUERY_STRING":"_url=\/index\/index","REQUEST_URI":"\/index\/index","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500014411.571,"REQUEST_TIME":1500014411}
+{"a":"b"}
+
+-----[2017-07-14 06:40:16]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","CONTENT_LENGTH":"3","HTTP_ACCEPT":"application\/json","HTTP_ORIGIN":"file:\/\/","HTTP_X_REQUESTED_WITH":"XMLHttpRequest","HTTP_USER_AGENT":"Mozilla\/5.0 (Linux; Android 5.0.2; Redmi Note 3 Build\/LRX22G; wv) AppleWebKit\/537.36 (KHTML, like Gecko) Version\/4.0 Chrome\/45.0.2454.95 Mobile Safari\/537.36 Html5Plus\/1.0","CONTENT_TYPE":"application\/x-www-form-urlencoded","HTTP_ACCEPT_ENCODING":"gzip, deflate","HTTP_ACCEPT_LANGUAGE":"zh-CN,en-US;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/5.6.31","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"192.168.0.222","SERVER_PORT":"80","REMOTE_ADDR":"192.168.0.108","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"34749","REDIRECT_URL":"\/index\/index","REDIRECT_QUERY_STRING":"_url=\/index\/index","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"POST","QUERY_STRING":"_url=\/index\/index","REQUEST_URI":"\/index\/index","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500014416.541,"REQUEST_TIME":1500014416}
+{"a":"b"}
+
+-----[2017-07-14 06:40:29]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","CONTENT_LENGTH":"3","HTTP_ACCEPT":"application\/json","HTTP_ORIGIN":"file:\/\/","HTTP_X_REQUESTED_WITH":"XMLHttpRequest","HTTP_USER_AGENT":"Mozilla\/5.0 (Linux; Android 5.0.2; Redmi Note 3 Build\/LRX22G; wv) AppleWebKit\/537.36 (KHTML, like Gecko) Version\/4.0 Chrome\/45.0.2454.95 Mobile Safari\/537.36 Html5Plus\/1.0","CONTENT_TYPE":"application\/x-www-form-urlencoded","HTTP_ACCEPT_ENCODING":"gzip, deflate","HTTP_ACCEPT_LANGUAGE":"zh-CN,en-US;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/5.6.31","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"192.168.0.222","SERVER_PORT":"80","REMOTE_ADDR":"192.168.0.108","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"34750","REDIRECT_URL":"\/index\/index","REDIRECT_QUERY_STRING":"_url=\/index\/index","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"POST","QUERY_STRING":"_url=\/index\/index","REQUEST_URI":"\/index\/index","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500014429.563,"REQUEST_TIME":1500014429}
+{"a":"b"}
+
+-----[2017-07-14 06:41:12]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","CONTENT_LENGTH":"3","HTTP_ACCEPT":"application\/json","HTTP_ORIGIN":"file:\/\/","HTTP_X_REQUESTED_WITH":"XMLHttpRequest","HTTP_USER_AGENT":"Mozilla\/5.0 (Linux; Android 5.0.2; Redmi Note 3 Build\/LRX22G; wv) AppleWebKit\/537.36 (KHTML, like Gecko) Version\/4.0 Chrome\/45.0.2454.95 Mobile Safari\/537.36 Html5Plus\/1.0","CONTENT_TYPE":"application\/x-www-form-urlencoded","HTTP_ACCEPT_ENCODING":"gzip, deflate","HTTP_ACCEPT_LANGUAGE":"zh-CN,en-US;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/5.6.31","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"192.168.0.222","SERVER_PORT":"80","REMOTE_ADDR":"192.168.0.108","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"34751","REDIRECT_URL":"\/index\/index","REDIRECT_QUERY_STRING":"_url=\/index\/index","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"POST","QUERY_STRING":"_url=\/index\/index","REQUEST_URI":"\/index\/index","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500014472.177,"REQUEST_TIME":1500014472}
+{"a":"b"}
+
+-----[2017-07-14 06:41:13]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","CONTENT_LENGTH":"3","HTTP_ACCEPT":"application\/json","HTTP_ORIGIN":"file:\/\/","HTTP_X_REQUESTED_WITH":"XMLHttpRequest","HTTP_USER_AGENT":"Mozilla\/5.0 (Linux; Android 5.0.2; Redmi Note 3 Build\/LRX22G; wv) AppleWebKit\/537.36 (KHTML, like Gecko) Version\/4.0 Chrome\/45.0.2454.95 Mobile Safari\/537.36 Html5Plus\/1.0","CONTENT_TYPE":"application\/x-www-form-urlencoded","HTTP_ACCEPT_ENCODING":"gzip, deflate","HTTP_ACCEPT_LANGUAGE":"zh-CN,en-US;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/5.6.31","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"192.168.0.222","SERVER_PORT":"80","REMOTE_ADDR":"192.168.0.108","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"34751","REDIRECT_URL":"\/index\/index","REDIRECT_QUERY_STRING":"_url=\/index\/index","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"POST","QUERY_STRING":"_url=\/index\/index","REQUEST_URI":"\/index\/index","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500014473.476,"REQUEST_TIME":1500014473}
+{"a":"b"}
+
+-----[2017-07-14 06:41:13]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","CONTENT_LENGTH":"3","HTTP_ACCEPT":"application\/json","HTTP_ORIGIN":"file:\/\/","HTTP_X_REQUESTED_WITH":"XMLHttpRequest","HTTP_USER_AGENT":"Mozilla\/5.0 (Linux; Android 5.0.2; Redmi Note 3 Build\/LRX22G; wv) AppleWebKit\/537.36 (KHTML, like Gecko) Version\/4.0 Chrome\/45.0.2454.95 Mobile Safari\/537.36 Html5Plus\/1.0","CONTENT_TYPE":"application\/x-www-form-urlencoded","HTTP_ACCEPT_ENCODING":"gzip, deflate","HTTP_ACCEPT_LANGUAGE":"zh-CN,en-US;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/5.6.31","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"192.168.0.222","SERVER_PORT":"80","REMOTE_ADDR":"192.168.0.108","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"34751","REDIRECT_URL":"\/index\/index","REDIRECT_QUERY_STRING":"_url=\/index\/index","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"POST","QUERY_STRING":"_url=\/index\/index","REQUEST_URI":"\/index\/index","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500014473.72,"REQUEST_TIME":1500014473}
+{"a":"b"}
+
+-----[2017-07-14 06:41:30]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","CONTENT_LENGTH":"3","HTTP_ACCEPT":"application\/json","HTTP_ORIGIN":"file:\/\/","HTTP_X_REQUESTED_WITH":"XMLHttpRequest","HTTP_USER_AGENT":"Mozilla\/5.0 (Linux; Android 5.0.2; Redmi Note 3 Build\/LRX22G; wv) AppleWebKit\/537.36 (KHTML, like Gecko) Version\/4.0 Chrome\/45.0.2454.95 Mobile Safari\/537.36 Html5Plus\/1.0","CONTENT_TYPE":"application\/x-www-form-urlencoded","HTTP_ACCEPT_ENCODING":"gzip, deflate","HTTP_ACCEPT_LANGUAGE":"zh-CN,en-US;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/5.6.31","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"192.168.0.222","SERVER_PORT":"80","REMOTE_ADDR":"192.168.0.108","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"34752","REDIRECT_URL":"\/index\/index","REDIRECT_QUERY_STRING":"_url=\/index\/index","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"POST","QUERY_STRING":"_url=\/index\/index","REQUEST_URI":"\/index\/index","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500014490.218,"REQUEST_TIME":1500014490}
+{"a":"b"}
+
+-----[2017-07-14 06:41:32]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","CONTENT_LENGTH":"3","HTTP_ACCEPT":"application\/json","HTTP_ORIGIN":"file:\/\/","HTTP_X_REQUESTED_WITH":"XMLHttpRequest","HTTP_USER_AGENT":"Mozilla\/5.0 (Linux; Android 5.0.2; Redmi Note 3 Build\/LRX22G; wv) AppleWebKit\/537.36 (KHTML, like Gecko) Version\/4.0 Chrome\/45.0.2454.95 Mobile Safari\/537.36 Html5Plus\/1.0","CONTENT_TYPE":"application\/x-www-form-urlencoded","HTTP_ACCEPT_ENCODING":"gzip, deflate","HTTP_ACCEPT_LANGUAGE":"zh-CN,en-US;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/5.6.31","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"192.168.0.222","SERVER_PORT":"80","REMOTE_ADDR":"192.168.0.108","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"34752","REDIRECT_URL":"\/index\/index","REDIRECT_QUERY_STRING":"_url=\/index\/index","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"POST","QUERY_STRING":"_url=\/index\/index","REQUEST_URI":"\/index\/index","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500014492.491,"REQUEST_TIME":1500014492}
+{"a":"b"}
+
+-----[2017-07-14 06:41:33]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","CONTENT_LENGTH":"3","HTTP_ACCEPT":"application\/json","HTTP_ORIGIN":"file:\/\/","HTTP_X_REQUESTED_WITH":"XMLHttpRequest","HTTP_USER_AGENT":"Mozilla\/5.0 (Linux; Android 5.0.2; Redmi Note 3 Build\/LRX22G; wv) AppleWebKit\/537.36 (KHTML, like Gecko) Version\/4.0 Chrome\/45.0.2454.95 Mobile Safari\/537.36 Html5Plus\/1.0","CONTENT_TYPE":"application\/x-www-form-urlencoded","HTTP_ACCEPT_ENCODING":"gzip, deflate","HTTP_ACCEPT_LANGUAGE":"zh-CN,en-US;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/5.6.31","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"192.168.0.222","SERVER_PORT":"80","REMOTE_ADDR":"192.168.0.108","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"34752","REDIRECT_URL":"\/index\/index","REDIRECT_QUERY_STRING":"_url=\/index\/index","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"POST","QUERY_STRING":"_url=\/index\/index","REQUEST_URI":"\/index\/index","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500014493.182,"REQUEST_TIME":1500014493}
+{"a":"b"}
+
+-----[2017-07-14 06:42:12]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","CONTENT_LENGTH":"3","HTTP_ACCEPT":"application\/json","HTTP_ORIGIN":"file:\/\/","HTTP_X_REQUESTED_WITH":"XMLHttpRequest","HTTP_USER_AGENT":"Mozilla\/5.0 (Linux; Android 5.0.2; Redmi Note 3 Build\/LRX22G; wv) AppleWebKit\/537.36 (KHTML, like Gecko) Version\/4.0 Chrome\/45.0.2454.95 Mobile Safari\/537.36 Html5Plus\/1.0","CONTENT_TYPE":"application\/x-www-form-urlencoded","HTTP_ACCEPT_ENCODING":"gzip, deflate","HTTP_ACCEPT_LANGUAGE":"zh-CN,en-US;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/5.6.31","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"192.168.0.222","SERVER_PORT":"80","REMOTE_ADDR":"192.168.0.108","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"34755","REDIRECT_URL":"\/index\/index","REDIRECT_QUERY_STRING":"_url=\/index\/index","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"POST","QUERY_STRING":"_url=\/index\/index","REQUEST_URI":"\/index\/index","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500014532.267,"REQUEST_TIME":1500014532}
+{"a":"b"}
+
+-----[2017-07-14 06:45:14]-------
+message：Undefined variable: _SESSION<hr>line：19<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\IndexController.php(19): Api\Controllers\IndexController::indexAction()
+<br/>#
+1 [internal function]: Api\Controllers\IndexController->indexAction()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->callActionMethod(Object(Api\Controllers\IndexController), 'indexAction', Array)
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+4 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+6 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+7 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","CONTENT_LENGTH":"3","HTTP_ACCEPT":"application\/json","HTTP_ORIGIN":"file:\/\/","HTTP_X_REQUESTED_WITH":"XMLHttpRequest","HTTP_USER_AGENT":"Mozilla\/5.0 (Linux; Android 5.0.2; Redmi Note 3 Build\/LRX22G; wv) AppleWebKit\/537.36 (KHTML, like Gecko) Version\/4.0 Chrome\/45.0.2454.95 Mobile Safari\/537.36 Html5Plus\/1.0","CONTENT_TYPE":"application\/x-www-form-urlencoded","HTTP_ACCEPT_ENCODING":"gzip, deflate","HTTP_ACCEPT_LANGUAGE":"zh-CN,en-US;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\Users\\Elsa\\AppData\\Roaming\\npm;C:\\Java\\jdk1.8.0_74\\bin;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64;C:\\laragon22\\bin\\php\\php-5.6.31-Win32-VC11-x64\\ext;E:\\Program Files\\Oracle\\VirtualBox;C:\\Users\\Elsa\\AppData\\Local\\Microsoft\\WindowsApps;","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"","SERVER_SOFTWARE":"Apache\/2.4.25 (Win64) OpenSSL\/1.0.2k PHP\/5.6.31","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"192.168.0.222","SERVER_PORT":"80","REMOTE_ADDR":"192.168.0.108","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"admin@example.com","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"34758","REDIRECT_URL":"\/index\/index","REDIRECT_QUERY_STRING":"_url=\/index\/index","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"POST","QUERY_STRING":"_url=\/index\/index","REQUEST_URI":"\/index\/index","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1500014714.795,"REQUEST_TIME":1500014714}
+{"a":"b"}

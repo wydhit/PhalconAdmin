@@ -1,0 +1,946 @@
+
+
+-----[2017-07-12 06:21:40]-------
+message：Api\Controllers\IndexController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_CACHE_CONTROL":"max-age=0","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54393","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"","REQUEST_URI":"\/","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840500.229,"REQUEST_TIME":1499840500}
+[]
+
+-----[2017-07-12 06:21:40]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54393","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840500.498,"REQUEST_TIME":1499840500}
+[]
+
+-----[2017-07-12 06:22:49]-------
+message：Action 'index' was not found on handler 'index'<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Action 'index' ...', 5)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_CACHE_CONTROL":"max-age=0","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54430","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"","REQUEST_URI":"\/","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840569.608,"REQUEST_TIME":1499840569}
+[]
+
+-----[2017-07-12 06:22:49]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54430","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840569.77,"REQUEST_TIME":1499840569}
+[]
+
+-----[2017-07-12 06:23:02]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54442","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840582.575,"REQUEST_TIME":1499840582}
+[]
+
+-----[2017-07-12 06:23:03]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54442","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840583.483,"REQUEST_TIME":1499840583}
+[]
+
+-----[2017-07-12 06:23:03]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54442","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840583.813,"REQUEST_TIME":1499840583}
+[]
+
+-----[2017-07-12 06:23:19]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54454","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840599.161,"REQUEST_TIME":1499840599}
+[]
+
+-----[2017-07-12 06:25:21]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54514","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840721.972,"REQUEST_TIME":1499840721}
+[]
+
+-----[2017-07-12 06:25:32]-------
+message：Module definition path 'E:\mytest\PhalconAdmin\api\modules/user/Module.php' doesn't exist<hr>line：45<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+1 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+2 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54519","REDIRECT_URL":"\/user\/index\/1","REDIRECT_QUERY_STRING":"_url=\/user\/index\/1","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/user\/index\/1","REQUEST_URI":"\/user\/index\/1","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840732.05,"REQUEST_TIME":1499840732}
+[]
+
+-----[2017-07-12 06:25:32]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/user\/index\/1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54519","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840732.224,"REQUEST_TIME":1499840732}
+[]
+
+-----[2017-07-12 06:25:54]-------
+message：Api\Controllers\User\IndexController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_CACHE_CONTROL":"max-age=0","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54531","REDIRECT_URL":"\/user\/index\/1","REDIRECT_QUERY_STRING":"_url=\/user\/index\/1","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/user\/index\/1","REQUEST_URI":"\/user\/index\/1","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840754.249,"REQUEST_TIME":1499840754}
+[]
+
+-----[2017-07-12 06:25:54]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/user\/index\/1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54531","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840754.438,"REQUEST_TIME":1499840754}
+[]
+
+-----[2017-07-12 06:25:55]-------
+message：Api\Controllers\User\IndexController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_CACHE_CONTROL":"max-age=0","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54531","REDIRECT_URL":"\/user\/index\/1","REDIRECT_QUERY_STRING":"_url=\/user\/index\/1","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/user\/index\/1","REQUEST_URI":"\/user\/index\/1","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840755.292,"REQUEST_TIME":1499840755}
+[]
+
+-----[2017-07-12 06:25:55]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/user\/index\/1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54531","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840755.411,"REQUEST_TIME":1499840755}
+[]
+
+-----[2017-07-12 06:26:12]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/user\/index\/1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54544","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840772.119,"REQUEST_TIME":1499840772}
+[]
+
+-----[2017-07-12 06:26:13]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/user\/index\/1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54544","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840773.121,"REQUEST_TIME":1499840773}
+[]
+
+-----[2017-07-12 06:26:24]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/user\/index\/1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54552","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840784.767,"REQUEST_TIME":1499840784}
+[]
+
+-----[2017-07-12 06:26:37]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/user\/index\/1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54560","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840797.129,"REQUEST_TIME":1499840797}
+[]
+
+-----[2017-07-12 06:26:38]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/user\/index\/1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54560","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840798.052,"REQUEST_TIME":1499840798}
+[]
+
+-----[2017-07-12 06:26:38]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/user\/index\/1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54560","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840798.343,"REQUEST_TIME":1499840798}
+[]
+
+-----[2017-07-12 06:26:38]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/user\/index\/1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54560","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840798.536,"REQUEST_TIME":1499840798}
+[]
+
+-----[2017-07-12 06:26:38]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/user\/index\/1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54560","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840798.713,"REQUEST_TIME":1499840798}
+[]
+
+-----[2017-07-12 06:26:45]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/user\/index\/1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54561","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840805.056,"REQUEST_TIME":1499840805}
+[]
+
+-----[2017-07-12 06:26:46]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/user\/index\/1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54561","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840806.248,"REQUEST_TIME":1499840806}
+[]
+
+-----[2017-07-12 06:26:46]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/user\/index\/1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54561","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840806.597,"REQUEST_TIME":1499840806}
+[]
+
+-----[2017-07-12 06:26:46]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/user\/index\/1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54561","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840806.825,"REQUEST_TIME":1499840806}
+[]
+
+-----[2017-07-12 06:26:47]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/user\/index\/1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54561","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840807.024,"REQUEST_TIME":1499840807}
+[]
+
+-----[2017-07-12 06:26:47]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/user\/index\/1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54561","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840807.19,"REQUEST_TIME":1499840807}
+[]
+
+-----[2017-07-12 06:26:47]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/user\/index\/1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54561","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840807.856,"REQUEST_TIME":1499840807}
+[]
+
+-----[2017-07-12 06:26:48]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/user\/index\/1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54561","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840808.191,"REQUEST_TIME":1499840808}
+[]
+
+-----[2017-07-12 06:26:48]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/user\/index\/1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54561","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840808.458,"REQUEST_TIME":1499840808}
+[]
+
+-----[2017-07-12 06:27:11]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/user\/index\/1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54581","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840831.894,"REQUEST_TIME":1499840831}
+[]
+
+-----[2017-07-12 06:27:12]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/user\/index\/1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54581","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840832.987,"REQUEST_TIME":1499840832}
+[]
+
+-----[2017-07-12 06:27:13]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/user\/index\/1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54581","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840833.736,"REQUEST_TIME":1499840833}
+[]
+
+-----[2017-07-12 06:29:39]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/user\/index\/1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54672","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840979.989,"REQUEST_TIME":1499840979}
+[]
+
+-----[2017-07-12 06:29:40]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/user\/index\/1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54672","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840980.839,"REQUEST_TIME":1499840980}
+[]
+
+-----[2017-07-12 06:29:54]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_DNT":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/53.0.2785.104 Safari\/537.36 Core\/1.53.3103.400 QQBrowser\/9.6.11372.400","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54721","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840994.927,"REQUEST_TIME":1499840994}
+[]
+
+-----[2017-07-12 06:29:55]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/53.0.2785.104 Safari\/537.36 Core\/1.53.3103.400 QQBrowser\/9.6.11372.400","HTTP_ACCEPT":"*\/*","HTTP_DNT":"1","HTTP_REFERER":"http:\/\/api.p.a.com\/user\/index\/1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54721","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840995.695,"REQUEST_TIME":1499840995}
+[]
+
+-----[2017-07-12 06:29:56]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_DNT":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/53.0.2785.104 Safari\/537.36 Core\/1.53.3103.400 QQBrowser\/9.6.11372.400","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"54721","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499840996.108,"REQUEST_TIME":1499840996}
+[]
+
+-----[2017-07-12 06:32:01]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/user\/index\/1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"55107","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499841121.677,"REQUEST_TIME":1499841121}
+[]
+
+-----[2017-07-12 06:32:02]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/user\/index\/1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"55107","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499841122.499,"REQUEST_TIME":1499841122}
+[]
+
+-----[2017-07-12 06:32:02]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/user\/index\/1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"55107","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499841122.715,"REQUEST_TIME":1499841122}
+[]
+
+-----[2017-07-12 06:32:02]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/user\/index\/1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"55107","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499841122.948,"REQUEST_TIME":1499841122}
+[]
+
+-----[2017-07-12 06:32:03]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/user\/index\/1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"55107","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499841123.18,"REQUEST_TIME":1499841123}
+[]
+
+-----[2017-07-12 06:32:10]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/user\/index\/1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"55108","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499841130.458,"REQUEST_TIME":1499841130}
+[]
+
+-----[2017-07-12 06:32:16]-------
+message：Api\Controllers\AdminController handler class cannot be loaded<hr>line：45<hr>Trace:<br/><br/>#
+0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Api\\Controllers...', 2)
+<br/>#
+1 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+3 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+5 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"image\/webp,image\/*,*\/*;q=0.8","HTTP_REFERER":"http:\/\/api.p.a.com\/user\/index\/1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"55130","REDIRECT_URL":"\/favicon.ico","REDIRECT_QUERY_STRING":"_url=\/favicon.ico","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/favicon.ico","REQUEST_URI":"\/favicon.ico","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499841136.553,"REQUEST_TIME":1499841136}
+[]
+
+-----[2017-07-12 06:44:33]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_CACHE_CONTROL":"max-age=0","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/53.0.2785.104 Safari\/537.36 Core\/1.53.3103.400 QQBrowser\/9.6.11372.400","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_DNT":"1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"55803","REDIRECT_URL":"\/user\/index\/1","REDIRECT_QUERY_STRING":"_url=\/user\/index\/1","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/user\/index\/1","REQUEST_URI":"\/user\/index\/1","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499841873.91,"REQUEST_TIME":1499841873}
+[]
+
+-----[2017-07-12 06:44:34]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_CACHE_CONTROL":"max-age=0","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/53.0.2785.104 Safari\/537.36 Core\/1.53.3103.400 QQBrowser\/9.6.11372.400","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_DNT":"1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"55803","REDIRECT_URL":"\/user\/index\/1","REDIRECT_QUERY_STRING":"_url=\/user\/index\/1","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/user\/index\/1","REQUEST_URI":"\/user\/index\/1","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499841874.9,"REQUEST_TIME":1499841874}
+[]
+
+-----[2017-07-12 06:44:35]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_PRAGMA":"no-cache","HTTP_CACHE_CONTROL":"no-cache","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/53.0.2785.104 Safari\/537.36 Core\/1.53.3103.400 QQBrowser\/9.6.11372.400","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_DNT":"1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"55803","REDIRECT_URL":"\/user\/index\/1","REDIRECT_QUERY_STRING":"_url=\/user\/index\/1","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/user\/index\/1","REQUEST_URI":"\/user\/index\/1","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499841875.561,"REQUEST_TIME":1499841875}
+[]
+
+-----[2017-07-12 06:44:36]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_CACHE_CONTROL":"max-age=0","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/53.0.2785.104 Safari\/537.36 Core\/1.53.3103.400 QQBrowser\/9.6.11372.400","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_DNT":"1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"55803","REDIRECT_URL":"\/user\/index\/1","REDIRECT_QUERY_STRING":"_url=\/user\/index\/1","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/user\/index\/1","REQUEST_URI":"\/user\/index\/1","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499841876.054,"REQUEST_TIME":1499841876}
+[]
+
+-----[2017-07-12 06:44:36]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_CACHE_CONTROL":"max-age=0","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/53.0.2785.104 Safari\/537.36 Core\/1.53.3103.400 QQBrowser\/9.6.11372.400","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_DNT":"1","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"55803","REDIRECT_URL":"\/user\/index\/1","REDIRECT_QUERY_STRING":"_url=\/user\/index\/1","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/user\/index\/1","REQUEST_URI":"\/user\/index\/1","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499841876.625,"REQUEST_TIME":1499841876}
+[]
+
+-----[2017-07-12 06:45:02]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_CACHE_CONTROL":"max-age=0","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"55825","REDIRECT_URL":"\/user\/index\/1","REDIRECT_QUERY_STRING":"_url=\/user\/index\/1","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/user\/index\/1","REQUEST_URI":"\/user\/index\/1","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499841902.608,"REQUEST_TIME":1499841902}
+[]
+
+-----[2017-07-12 06:45:03]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_CACHE_CONTROL":"max-age=0","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"55825","REDIRECT_URL":"\/user\/index\/1","REDIRECT_QUERY_STRING":"_url=\/user\/index\/1","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/user\/index\/1","REQUEST_URI":"\/user\/index\/1","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499841903.631,"REQUEST_TIME":1499841903}
+[]
+
+-----[2017-07-12 06:46:10]-------
+message：登录超时！,请重新登录<hr>line：26<hr>Trace:<br/><br/>#
+0 E:\mytest\PhalconAdmin\api\Controllers\ApiController.php(18): Api\Controllers\ApiController->checkToken()
+<br/>#
+1 [internal function]: Api\Controllers\ApiController->beforeExecuteRoute(Object(Phalcon\Mvc\Dispatcher))
+<br/>#
+2 [internal function]: Phalcon\Dispatcher->_dispatch()
+<br/>#
+3 [internal function]: Phalcon\Dispatcher->dispatch()
+<br/>#
+4 E:\mytest\PhalconAdmin\api\Bootstrap.php(45): Phalcon\Mvc\Application->handle()
+<br/>#
+5 E:\mytest\PhalconAdmin\api\public\index.php(14): Api\Bootstrap->run()
+<br/>#
+6 {main}
+--SERVICE INFO--
+{"REDIRECT_STATUS":"200","HTTP_HOST":"api.p.a.com","HTTP_CONNECTION":"keep-alive","HTTP_UPGRADE_INSECURE_REQUESTS":"1","HTTP_USER_AGENT":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_ACCEPT_ENCODING":"gzip, deflate, sdch","HTTP_ACCEPT_LANGUAGE":"zh-CN,zh;q=0.8","PATH":"C:\\Program Files\\Python36\\Scripts\\;C:\\Program Files\\Python36\\;C:\\Program Files\\Docker\\Docker\\Resources\\bin;C:\\Ruby23-x64\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Wamp64\\bin\\php\\php5.6.25;C:\\Wamp64\\bin\\php\\php5.6.25\\ext;E:\\composer;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\nodejs;E:\\phalcon-devtools;E:\\HashiCorp\\Vagrant\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps","SystemRoot":"C:\\WINDOWS","COMSPEC":"C:\\WINDOWS\\system32\\cmd.exe","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW","WINDIR":"C:\\WINDOWS","SERVER_SIGNATURE":"<address>Apache\/2.4.23 (Win64) PHP\/5.6.25 Server at api.p.a.com Port 80<\/address>\n","SERVER_SOFTWARE":"Apache\/2.4.23 (Win64) PHP\/5.6.25","SERVER_NAME":"api.p.a.com","SERVER_ADDR":"127.0.0.1","SERVER_PORT":"80","REMOTE_ADDR":"127.0.0.1","DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","REQUEST_SCHEME":"http","CONTEXT_PREFIX":"","CONTEXT_DOCUMENT_ROOT":"E:\/mytest\/PhalconAdmin\/api\/public","SERVER_ADMIN":"wampserver@wampserver.invalid","SCRIPT_FILENAME":"E:\/mytest\/PhalconAdmin\/api\/public\/index.php","REMOTE_PORT":"55861","REDIRECT_URL":"\/user\/index\/1","REDIRECT_QUERY_STRING":"_url=\/user\/index\/1&sort=id","GATEWAY_INTERFACE":"CGI\/1.1","SERVER_PROTOCOL":"HTTP\/1.1","REQUEST_METHOD":"GET","QUERY_STRING":"_url=\/user\/index\/1&sort=id","REQUEST_URI":"\/user\/index\/1?sort=id","SCRIPT_NAME":"\/index.php","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":1499841970.784,"REQUEST_TIME":1499841970}
+[]
