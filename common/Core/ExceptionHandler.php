@@ -184,7 +184,7 @@ class ExceptionHandler
     /**
      * @param $isDebug bool
      */
-    public function setDebug($isDebug)
+    public function setDebug($isDebug=null)
     {
         if ($isDebug === null) {
             $isDebug = false;

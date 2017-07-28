@@ -54,7 +54,7 @@ class ComGoodsSearch extends BaseSearch
             "page" => $this->page
         ]))->getPaginate();
         $this->gridReturnData = $paginator->items->filter(function ($data){
-            $data->preimg="<img  data-rel=\"tooltip\" data-placement=\"left\" src='{$data->preimg}' width='50' />";
+            $data->preimg="<img  data-rel=\"tooltip\" data-placement=\"left\" src='http://image.ejshendeng.com/{$data->preimg}' width='50' />";
             return $data;
         });
         $this->gridReturnCount = $paginator->total_items;

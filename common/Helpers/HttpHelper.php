@@ -8,13 +8,13 @@
 
 namespace Common\Helpers;
 
-use Phalcon\Di\FactoryDefault;
+use Phalcon\Di;
 
 class HttpHelper
 {
     public static function isReturnJson()
     {
-        return FactoryDefault::getDefault()->get('request')->getBestAccept() === 'application/json';
+        return Di::getDefault()->get('request')->getBestAccept() === 'application/json';
     }
 
 }

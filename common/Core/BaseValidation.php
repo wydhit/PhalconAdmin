@@ -12,7 +12,7 @@ use Phalcon\Validation;
 use Phalcon\Validation\Validator;
 
 
-class BaseValidator extends Validation
+class BaseValidation extends Validation
 {
     public $defaultMessages = [
         "Alnum" => "只能输入字母或者数字",

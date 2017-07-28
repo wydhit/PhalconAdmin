@@ -1,0 +1,32 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: wyd
+ * Date: 2017-07-28
+ * Time: 10:57
+ */
+?>
+<form action="<?php echo $this->url->get('model/create/') ?>" method="post" id="create"
+      class="form-horizontal">
+    <div class="form-group">
+        <label class="col-sm-2 control-label no-padding-right" for="title">表名
+            <small style="color:red;">*</small>
+        </label>
+        <div class="col-sm-5">
+            <input type="text" name="tableName" />
+        </div>
+    </div>
+    <div class="hr hr-12"></div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-9">
+            <button class="btn btn-info" type="submit">
+                <i class="ace-icon fa fa-check bigger-110"></i>
+                提交
+            </button>
+            <button class="btn" type="reset">
+                <i class="ace-icon fa fa-undo bigger-110"></i>
+                重置
+            </button>
+        </div>
+    </div>
+</form>

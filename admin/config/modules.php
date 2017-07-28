@@ -8,7 +8,7 @@
 return [
     'user' => [
         'className' => 'Admin\Modules\User\Module',
-        'path' => PROJECT_PATH . 'modules/user/Module.php',
+        'path' => PROJECT_PATH . '/modules/user/Module.php',
         'namespace'=>'Admin\Modules\User\Controllers'
     ]
 

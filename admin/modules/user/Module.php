@@ -37,7 +37,7 @@ class Module implements ModuleDefinitionInterface
             $view = new View();
             $view->setDI($di);
             $view->setViewsDir(__DIR__ . '/views/');
-            $view->setMainView(PROJECT_PATH.'views/index');
+            $view->setMainView(PROJECT_PATH.'/views/index');
             $view->registerEngines([
                 '.phtml' => PhpEngine::class
             ]);

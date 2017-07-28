@@ -1,6 +1,7 @@
 <?php
 
 namespace Admin;
+use Phalcon\Config;
 use Phalcon\Loader;
 use Phalcon\Mvc\Url;
 use Phalcon\Mvc\View;
@@ -11,111 +12,33 @@ use \Common\Core\Bootstrap as BaseBootstrap;
 class Bootstrap extends BaseBootstrap
 {
     public $allModules=[];
-    function __construct(Loader $loader)
-    {
-        $this->loader = $loader;
-        $this->initConfig();
-        define('APP_DEBUG', $this->config->get('debug', false));
-        $this->registerExceptionHandle();
-        $this->registerService();
-    }
-
-    public function registerExceptionHandle()
-    {
-        /*注册错误处理*/
-        $ExceptionHandler = new \Common\Core\ExceptionHandler();
-        $ExceptionHandler->setDebug(APP_DEBUG);
-        $ExceptionHandler->listen();
-    }
-
-    public function run()
-    {
-        $application = new \Common\Core\Application($this->di);
-        $application->useImplicitView(false);
-        $this->allModules=require(PROJECT_PATH.'/config/modules.php');
-        if($this->allModules){
-            $application->registerModules($this->allModules);
-        }
-        $this->registerRouter($application);
-        if (APP_DEBUG) {
-            $this->di['app'] = $application;
-            (new \Snowair\Debugbar\ServiceProvider(COMMON_PATH . 'config/debugger_config.php'))->start();
-        }
-        $application->handle()->send();
-    }
-
-    public function initConfig()
-    {
-        /*缓存配置文件*/
-       /* $configCacheFile=$this->projectPath . '/config/configCache.php';
-        if(file_exists($configCacheFile)){
-            $config= new Config(require $configCacheFile);
-        }else{*/
-            $config = parent::initConfig();
-            if (file_exists(PROJECT_PATH . '/config/config.php')) {
-                $tmpConfig = require PROJECT_PATH . '/config/config.php';
-                $config->merge($tmpConfig);
-                unset($tmpConfig);
-            }
-            if (file_exists(PROJECT_PATH . '/config/local.config.php')) {
-                $tmpConfig = require(PROJECT_PATH . '/config/local.config.php');
-                $config->merge($tmpConfig);
-                unset($tmpConfig);
-            }
-       /*     file_put_contents($configCacheFile, "<?php\r\n return " . var_export($config->toArray(), true) . ';');
-        }*/
-        $this->config = $config;
-        return $config;
-    }
 
     public function registerRouter($application)
     {
-        //控制器分层需要在这里注册下目录 这是url地址出现的字符 为保持命名空间一致 实际目录应该首字母大写
-        $dirController=[ 'finance', 'user', 'access'];
-        $router = new \Phalcon\Mvc\Router(false);
-        $router->removeExtraSlashes(true);
+        $router=parent::registerRouter($application);
         $router->setDefaultNamespace(__NAMESPACE__.'\Controllers');
-        $router->setDefaultController('index');
-        $router->setDefaultAction('index');
-        /*默认路由*/
-        $router->add('/', array(
-            'controller' => 'index',
-            'action' => 'index',
-            'params' => ''
-        ));
-        $router->add('/:controller', array(
-            'controller' => 1,
-            'action' => 'index',
-            'params' => ''
-        ));
-        $router->add('/:controller/:action/:params', array(
-            'controller' => 1,
-            'action' => 2,
-            'params' => 3
-        ));
-        $router->add('/:controller/:action/:params', array(
-            'controller' => 1,
-            'action' => 2,
-            'params' => 3
-        ));
-        /*控制器分层路由*/
-        if (!empty($dirController) && is_array($dirController)) {
-            foreach ($dirController as $value) {
-                if (!is_string($value)) {
-                    continue;
+        //控制器分层需要在这里注册下目录 这是url地址出现的字符 为保持命名空间一致 实际目录应该首字母大写
+        if(file_exists(PROJECT_PATH.'/config/dir_controller.php')){
+            $dirController=require PROJECT_PATH.'/config/dir_controller.php';
+            /*控制器分层路由*/
+            if (!empty($dirController) && is_array($dirController)) {
+                foreach ($dirController as $value) {
+                    if (!is_string($value)) {
+                        continue;
+                    }
+                    $group= new \Phalcon\Mvc\Router\Group([
+                        'namespace' => __NAMESPACE__.'\Controllers\\' . ucfirst($value),
+                        'controller' => 'index',
+                        'action' => 'index'
+                    ]);
+                    $group->setPrefix('/'.$value);
+                    $group->add('',[]);
+                    $group->add('/:controller',['controller' => 1]);
+                    $group->add('/:controller/:action',['controller' => 1,'action'=>2]);
+                    $group->add('/:controller/:action/:params',['controller' => 1,'action'=>2,'params'=>3]);
+                    $router->mount($group);
+                    unset($group);
                 }
-                $group= new \Phalcon\Mvc\Router\Group([
-                    'namespace' => __NAMESPACE__.'\Controllers\\' . ucfirst($value),
-                    'controller' => 'index',
-                    'action' => 'index'
-                ]);
-                $group->setPrefix('/'.$value);
-                $group->add('',[]);
-                $group->add('/:controller',['controller' => 1]);
-                $group->add('/:controller/:action',['controller' => 1,'action'=>2]);
-                $group->add('/:controller/:action/:params',['controller' => 1,'action'=>2,'params'=>3]);
-                $router->mount($group);
-                unset($group);
             }
         }
         /*多模块路由*/
@@ -186,16 +109,14 @@ class Bootstrap extends BaseBootstrap
             return $session;
         });
         /*cookie*/
-        $di->setShared(
-            'cookies',
-            function () {
+        $di->setShared('cookies',function () {
                 $cookies = new Cookies();
                 $cookies->setExpire(time() + 24 * 60 * 60);
                 $cookies->useEncryption(true);
                 return $cookies;
             }
         );
-        $this->di = $di;
+        return $di;
     }
 
 }

@@ -2,7 +2,7 @@
 
 namespace Admin\Validator;
 
-use Common\Core\BaseValidator;
+use Common\Core\BaseValidation;
 use Phalcon\Validation\Validator\PresenceOf;
 use Phalcon\Validation\Validator\Confirmation;
 use Phalcon\Validation\Validator\StringLength;
@@ -21,7 +21,7 @@ use Phalcon\Validation\Validator\Regex;
 use Phalcon\Validation\Validator\Url;
 use Phalcon\Validation\Validator\CreditCard;
 
-class GoodsEditValidator extends BaseValidator
+class GoodsEditValidator extends BaseValidation
 {
     /**
      * 增加验证规则

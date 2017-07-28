@@ -22,52 +22,6 @@ use \Common\Core\Bootstrap as BaseBootstrap;
 class Bootstrap extends BaseBootstrap
 {
     public $allModules=[];
-    function __construct(Loader $loader)
-    {
-        $this->loader = $loader;
-        $this->rootPath = ROOT_PATH;
-        $this->projectPath = PROJECT_PATH;
-        $this->initConfig();
-        define('APP_DEBUG', $this->config->get('debug', false));
-        $this->registerService();
-    }
-
-
-    public function run()
-    {
-        $application = new \Common\Core\Application($this->di);
-        $application->useImplicitView(false);
-        $this->allModules=require(PROJECT_PATH.'config/modules.php');
-        if($this->allModules){
-            $application->registerModules($this->allModules);
-        }
-        $this->registerRouter($application);
-        $application->handle()->send();
-    }
-
-    public function initConfig()
-    {
-        /*缓存配置文件*/
-       /* $configCacheFile=$this->projectPath . '/config/configCache.php';
-        if(file_exists($configCacheFile)){
-            $config= new Config(require $configCacheFile);
-        }else{*/
-            $config = parent::initConfig();
-            if (file_exists($this->projectPath . '/config/config.php')) {
-                $tmpConfig = require $this->projectPath . '/config/config.php';
-                $config->merge($tmpConfig);
-                unset($tmpConfig);
-            }
-            if (file_exists($this->projectPath . '/config/local.config.php')) {
-                $tmpConfig = require($this->projectPath . '/config/local.config.php');
-                $config->merge($tmpConfig);
-                unset($tmpConfig);
-            }
-       /*     file_put_contents($configCacheFile, "<?php\r\n return " . var_export($config->toArray(), true) . ';');
-        }*/
-        $this->config = $config;
-        return $config;
-    }
 
     public function registerRouter($application)
     {

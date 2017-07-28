@@ -94,7 +94,7 @@ var helper = {
         $('body').append(dialogHtml);
         var dialogObj = $('#' + dialogDivId);
         var mydialog = dialogObj.removeClass('hide').dialog({
-            modal: false,
+            modal: true,
             closeOnEscape: true,
             width: width,
             height: height,

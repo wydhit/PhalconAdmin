@@ -37,7 +37,7 @@ class GoodsController extends AdminController
             $this->validationInput($request->get());
             /*保存数据*/
             $goods->assign($request->get(), '', ['title']);
-            if ($goods->save()) {
+            if ($goods->save([],'preimg')) {
                 return $this->sendSuccessJson('执行成功1');
             } else {
                 return $this->sendErrorJson('添加失败',[],$goods->getErrInput());
